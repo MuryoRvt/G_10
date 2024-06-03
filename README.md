@@ -1,3 +1,6 @@
 # G_10
 La repository du groupe 10.
-Veuillez rendre votre code en créant une nouvelle release: date_NomPrénom.
+Veuillez rendre votre code en créant une nouvelle release:
+Tag : NomPrénom
+Nom de la release : Code (si c'est un code) / Word (si c'est un Word) / etc...
+Description : Décrivez la release que vous postez. Si c'est un code par exemple, dites à quoi il sert, est-ce qu'il marche, est-ce qu'il est fini, etc...
