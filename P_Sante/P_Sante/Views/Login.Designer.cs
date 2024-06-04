@@ -28,94 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnSignUp = new System.Windows.Forms.Button();
-            this.btnSignIn = new System.Windows.Forms.Button();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnDebug = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picCat = new System.Windows.Forms.PictureBox();
+            this.btnSignIn = new MaterialSkin.Controls.MaterialButton();
+            this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
+            this.btnDebug = new MaterialSkin.Controls.MaterialButton();
+            this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPassword = new MaterialSkin.Controls.MaterialLabel();
+            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picCat)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picCat
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(503, 245);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(454, 374);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(201, 26);
-            this.txtPassword.TabIndex = 20;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(454, 328);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '*';
-            this.txtEmail.Size = new System.Drawing.Size(201, 26);
-            this.txtEmail.TabIndex = 19;
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.Location = new System.Drawing.Point(494, 474);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(118, 33);
-            this.btnSignUp.TabIndex = 18;
-            this.btnSignUp.Text = "S\'inscrire";
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.picCat.BackColor = System.Drawing.Color.Transparent;
+            this.picCat.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen;
+            this.picCat.Location = new System.Drawing.Point(318, 69);
+            this.picCat.Name = "picCat";
+            this.picCat.Size = new System.Drawing.Size(456, 282);
+            this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCat.TabIndex = 0;
+            this.picCat.TabStop = false;
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Location = new System.Drawing.Point(494, 419);
+            this.btnSignIn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSignIn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSignIn.Depth = 0;
+            this.btnSignIn.HighEmphasis = true;
+            this.btnSignIn.Icon = null;
+            this.btnSignIn.Location = new System.Drawing.Point(493, 453);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(118, 33);
-            this.btnSignIn.TabIndex = 17;
+            this.btnSignIn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSignIn.Size = new System.Drawing.Size(128, 36);
+            this.btnSignIn.TabIndex = 24;
             this.btnSignIn.Text = "Se connecter";
+            this.btnSignIn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSignIn.UseAccentColor = false;
             this.btnSignIn.UseVisualStyleBackColor = true;
             // 
-            // lblPassword
+            // btnSignUp
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(343, 377);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(105, 20);
-            this.lblPassword.TabIndex = 22;
-            this.lblPassword.Text = "Mot de passe";
+            this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSignUp.Depth = 0;
+            this.btnSignUp.HighEmphasis = true;
+            this.btnSignUp.Icon = null;
+            this.btnSignUp.Location = new System.Drawing.Point(509, 501);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSignUp.Size = new System.Drawing.Size(97, 36);
+            this.btnSignUp.TabIndex = 25;
+            this.btnSignUp.Text = "S\'inscrire";
+            this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSignUp.UseAccentColor = false;
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
+            // btnDebug
+            // 
+            this.btnDebug.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDebug.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDebug.Depth = 0;
+            this.btnDebug.HighEmphasis = true;
+            this.btnDebug.Icon = null;
+            this.btnDebug.Location = new System.Drawing.Point(927, 584);
+            this.btnDebug.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDebug.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDebug.Name = "btnDebug";
+            this.btnDebug.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDebug.Size = new System.Drawing.Size(76, 36);
+            this.btnDebug.TabIndex = 26;
+            this.btnDebug.Text = "Passer";
+            this.btnDebug.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDebug.UseAccentColor = false;
+            this.btnDebug.UseVisualStyleBackColor = true;
+            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(395, 331);
+            this.lblEmail.Depth = 0;
+            this.lblEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblEmail.Location = new System.Drawing.Point(403, 345);
+            this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 20);
-            this.lblEmail.TabIndex = 21;
+            this.lblEmail.Size = new System.Drawing.Size(45, 19);
+            this.lblEmail.TabIndex = 27;
             this.lblEmail.Text = "E-mail";
             // 
-            // btnDebug
+            // lblPassword
             // 
-            this.btnDebug.Location = new System.Drawing.Point(1017, 598);
-            this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(75, 23);
-            this.btnDebug.TabIndex = 23;
-            this.btnDebug.Text = "Passer";
-            this.btnDebug.UseVisualStyleBackColor = true;
-            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Depth = 0;
+            this.lblPassword.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPassword.Location = new System.Drawing.Point(352, 397);
+            this.lblPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(96, 19);
+            this.lblPassword.TabIndex = 28;
+            this.lblPassword.Text = "Mot de passe";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.AnimateReadOnly = false;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Depth = 0;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.LeadingIcon = null;
+            this.txtEmail.Location = new System.Drawing.Point(465, 328);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(189, 50);
+            this.txtEmail.TabIndex = 29;
+            this.txtEmail.Text = "";
+            this.txtEmail.TrailingIcon = null;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(465, 384);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(189, 50);
+            this.txtPassword.TabIndex = 30;
+            this.txtPassword.Text = "";
+            this.txtPassword.TrailingIcon = null;
             // 
             // Login
             // 
@@ -123,18 +173,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1159, 656);
-            this.Controls.Add(this.btnDebug);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSignIn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picCat);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,14 +192,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.Button btnSignIn;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Button btnDebug;
+        private System.Windows.Forms.PictureBox picCat;
+        private MaterialSkin.Controls.MaterialButton btnSignIn;
+        private MaterialSkin.Controls.MaterialButton btnSignUp;
+        private MaterialSkin.Controls.MaterialButton btnDebug;
+        private MaterialSkin.Controls.MaterialLabel lblEmail;
+        private MaterialSkin.Controls.MaterialLabel lblPassword;
+        private MaterialSkin.Controls.MaterialTextBox txtEmail;
+        private MaterialSkin.Controls.MaterialTextBox txtPassword;
     }
 }
 

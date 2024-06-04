@@ -26,22 +26,26 @@ namespace P_Sante.Controllers
 
         private Interests _aInterests;
 
+        private MentalQuestions _aMentalQuestions;
+
         /// <summary>
         /// Creates a new instance of Controller
         /// </summary>
         /// <param name="aLogin">Login page</param>
         /// <param name="aRegister">Register page</param>
         /// <param name="aModel">Model</param>
-        public Controller(Login aLogin, Register aRegister, Interests aInterests, Model aModel)
+        public Controller(Login aLogin, Register aRegister, Interests aInterests, MentalQuestions aMentalQuestions, Model aModel)
         {
             _aLogin = aLogin;
             _aRegister = aRegister;
             _aInterests = aInterests;
+            _aMentalQuestions = aMentalQuestions;
             _aModel = aModel;
 
             _aLogin.Controller = this;
             _aRegister.Controller = this;
             _aInterests.Controller = this;
+            _aMentalQuestions.Controller = this;
             _aModel.Controller = this;
         }
 
@@ -59,6 +63,11 @@ namespace P_Sante.Controllers
         public void OpenInterests()
         {
             _aInterests.Show();
+        }
+
+        public void OpenMentalQuestions()
+        {
+            _aMentalQuestions.Show();
         }
     }
 }

@@ -11,7 +11,7 @@ using P_Sante.Controllers;
 
 namespace P_Sante.Views
 {
-    public partial class Register : Form
+    public partial class Register : MaterialSkin.Controls.MaterialForm
     {
         /// <summary>
         /// Controller to manage the views
@@ -24,6 +24,12 @@ namespace P_Sante.Views
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            Controller.OpenLogin();
+            this.Hide();
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
             Controller.OpenLogin();
             this.Hide();

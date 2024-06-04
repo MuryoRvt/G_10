@@ -11,7 +11,7 @@ using P_Sante.Controllers;
 
 namespace P_Sante.Views
 {
-    public partial class Login : Form
+    public partial class Login : MaterialSkin.Controls.MaterialForm
     {
 
         public Controller Controller { get; set; }

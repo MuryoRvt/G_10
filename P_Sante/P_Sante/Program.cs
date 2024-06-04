@@ -28,12 +28,13 @@ namespace P_Sante
             Login aLogin = new Login();
             Register aRegister = new Register();
             Interests aInterests = new Interests();
+            MentalQuestions aMentalQuestions = new MentalQuestions();
 
             //model's instance
             Model aModel = new Model();
 
             //controller's instance
-            Controller aController = new Controller(aLogin, aRegister, aInterests, aModel);
+            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aModel);
 
             Application.Run(aLogin);
         }
