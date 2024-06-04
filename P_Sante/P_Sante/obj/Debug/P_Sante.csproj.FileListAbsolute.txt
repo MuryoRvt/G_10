@@ -1,0 +1,13 @@
+D:\P_Sante\P_Sante\bin\Debug\P_Sante.exe.config
+D:\P_Sante\P_Sante\bin\Debug\P_Sante.exe
+D:\P_Sante\P_Sante\bin\Debug\P_Sante.pdb
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.AssemblyReference.cache
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.SuggestedBindingRedirects.cache
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.Properties.Resources.resources
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.GenerateResource.cache
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.CoreCompileInputs.cache
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.exe
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.pdb
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Login.resources
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Register.resources
+D:\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Interests.resources
