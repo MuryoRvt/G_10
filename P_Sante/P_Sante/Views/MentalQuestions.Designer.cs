@@ -39,7 +39,7 @@
             this.txtFavourites1 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtFavourites2 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtFavourites3 = new MaterialSkin.Controls.MaterialTextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitQuestions = new System.Windows.Forms.SplitContainer();
             this.rdbNoFriends = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbYesFriends = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbNoAnxiety = new MaterialSkin.Controls.MaterialRadioButton();
@@ -47,10 +47,10 @@
             this.btnNext = new MaterialSkin.Controls.MaterialButton();
             this.btnPrevious = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitQuestions)).BeginInit();
+            this.splitQuestions.Panel1.SuspendLayout();
+            this.splitQuestions.Panel2.SuspendLayout();
+            this.splitQuestions.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblQ1
@@ -250,24 +250,25 @@
             this.txtFavourites3.Text = "";
             this.txtFavourites3.TrailingIcon = null;
             // 
-            // splitContainer1
+            // splitQuestions
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(580, 206);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitQuestions.IsSplitterFixed = true;
+            this.splitQuestions.Location = new System.Drawing.Point(580, 206);
+            this.splitQuestions.Name = "splitQuestions";
+            this.splitQuestions.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer1.Panel1
+            // splitQuestions.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.rdbNoFriends);
-            this.splitContainer1.Panel1.Controls.Add(this.rdbYesFriends);
+            this.splitQuestions.Panel1.Controls.Add(this.rdbNoFriends);
+            this.splitQuestions.Panel1.Controls.Add(this.rdbYesFriends);
             // 
-            // splitContainer1.Panel2
+            // splitQuestions.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.rdbNoAnxiety);
-            this.splitContainer1.Panel2.Controls.Add(this.rdbYesAnxiety);
-            this.splitContainer1.Size = new System.Drawing.Size(209, 152);
-            this.splitContainer1.SplitterDistance = 75;
-            this.splitContainer1.TabIndex = 31;
+            this.splitQuestions.Panel2.Controls.Add(this.rdbNoAnxiety);
+            this.splitQuestions.Panel2.Controls.Add(this.rdbYesAnxiety);
+            this.splitQuestions.Size = new System.Drawing.Size(209, 152);
+            this.splitQuestions.SplitterDistance = 75;
+            this.splitQuestions.TabIndex = 31;
             // 
             // rdbNoFriends
             // 
@@ -364,7 +365,7 @@
             this.btnPrevious.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPrevious.Size = new System.Drawing.Size(82, 36);
+            this.btnPrevious.Size = new System.Drawing.Size(104, 36);
             this.btnPrevious.TabIndex = 33;
             this.btnPrevious.Text = "Précédent";
             this.btnPrevious.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -380,7 +381,7 @@
             this.ClientSize = new System.Drawing.Size(1159, 656);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.splitQuestions);
             this.Controls.Add(this.txtFavourites3);
             this.Controls.Add(this.txtFavourites2);
             this.Controls.Add(this.txtFavourites1);
@@ -396,12 +397,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MentalQuestions";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.splitQuestions.Panel1.ResumeLayout(false);
+            this.splitQuestions.Panel1.PerformLayout();
+            this.splitQuestions.Panel2.ResumeLayout(false);
+            this.splitQuestions.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitQuestions)).EndInit();
+            this.splitQuestions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +421,7 @@
         private MaterialSkin.Controls.MaterialTextBox txtFavourites1;
         private MaterialSkin.Controls.MaterialTextBox txtFavourites2;
         private MaterialSkin.Controls.MaterialTextBox txtFavourites3;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitQuestions;
         private MaterialSkin.Controls.MaterialRadioButton rdbNoFriends;
         private MaterialSkin.Controls.MaterialRadioButton rdbYesFriends;
         private MaterialSkin.Controls.MaterialRadioButton rdbNoAnxiety;

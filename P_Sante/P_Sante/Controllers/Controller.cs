@@ -18,7 +18,7 @@ namespace P_Sante.Controllers
         /// <summary>
         /// Register page
         /// </summary>
-        private Register _aRegister;
+        private Registration _aRegister;
         /// <summary>
         /// Model (db manager)
         /// </summary>
@@ -34,7 +34,7 @@ namespace P_Sante.Controllers
         /// <param name="aLogin">Login page</param>
         /// <param name="aRegister">Register page</param>
         /// <param name="aModel">Model</param>
-        public Controller(Login aLogin, Register aRegister, Interests aInterests, MentalQuestions aMentalQuestions, Model aModel)
+        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, Model aModel)
         {
             _aLogin = aLogin;
             _aRegister = aRegister;

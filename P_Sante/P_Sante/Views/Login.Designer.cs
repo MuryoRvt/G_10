@@ -32,10 +32,8 @@
             this.btnSignIn = new MaterialSkin.Controls.MaterialButton();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.btnDebug = new MaterialSkin.Controls.MaterialButton();
-            this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPassword = new MaterialSkin.Controls.MaterialLabel();
-            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtEmail = new TextBoxForeColor.CustomMaterialTextBox();
+            this.txtPassword = new TextBoxForeColor.CustomMaterialTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,10 +41,10 @@
             // 
             this.picCat.BackColor = System.Drawing.Color.Transparent;
             this.picCat.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen;
-            this.picCat.Location = new System.Drawing.Point(318, 69);
+            this.picCat.Location = new System.Drawing.Point(409, 85);
             this.picCat.Name = "picCat";
-            this.picCat.Size = new System.Drawing.Size(456, 282);
-            this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCat.Size = new System.Drawing.Size(344, 294);
+            this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCat.TabIndex = 0;
             this.picCat.TabStop = false;
             // 
@@ -57,7 +55,7 @@
             this.btnSignIn.Depth = 0;
             this.btnSignIn.HighEmphasis = true;
             this.btnSignIn.Icon = null;
-            this.btnSignIn.Location = new System.Drawing.Point(493, 453);
+            this.btnSignIn.Location = new System.Drawing.Point(625, 444);
             this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
@@ -76,14 +74,14 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(509, 501);
+            this.btnSignUp.Location = new System.Drawing.Point(409, 444);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSignUp.Size = new System.Drawing.Size(97, 36);
+            this.btnSignUp.Size = new System.Drawing.Size(126, 36);
             this.btnSignUp.TabIndex = 25;
-            this.btnSignUp.Text = "S\'inscrire";
+            this.btnSignUp.Text = "        S\'inscrire         ";
             this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSignUp.UseAccentColor = false;
             this.btnSignUp.UseVisualStyleBackColor = true;
@@ -96,7 +94,7 @@
             this.btnDebug.Depth = 0;
             this.btnDebug.HighEmphasis = true;
             this.btnDebug.Icon = null;
-            this.btnDebug.Location = new System.Drawing.Point(927, 584);
+            this.btnDebug.Location = new System.Drawing.Point(1068, 70);
             this.btnDebug.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDebug.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDebug.Name = "btnDebug";
@@ -109,63 +107,51 @@
             this.btnDebug.UseVisualStyleBackColor = true;
             this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Depth = 0;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblEmail.Location = new System.Drawing.Point(403, 345);
-            this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 19);
-            this.lblEmail.TabIndex = 27;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Depth = 0;
-            this.lblPassword.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblPassword.Location = new System.Drawing.Point(352, 397);
-            this.lblPassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(96, 19);
-            this.lblPassword.TabIndex = 28;
-            this.lblPassword.Text = "Mot de passe";
-            // 
             // txtEmail
             // 
             this.txtEmail.AnimateReadOnly = false;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Gray;
+            this.txtEmail.ForeColorCustom = System.Drawing.Color.LightGray;
+            this.txtEmail.IsPassword = false;
             this.txtEmail.LeadingIcon = null;
-            this.txtEmail.Location = new System.Drawing.Point(465, 328);
+            this.txtEmail.Location = new System.Drawing.Point(409, 329);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(189, 50);
+            this.txtEmail.PasswordChar = '*';
+            this.txtEmail.Size = new System.Drawing.Size(344, 50);
             this.txtEmail.TabIndex = 29;
-            this.txtEmail.Text = "";
+            this.txtEmail.Text = "E-mail";
             this.txtEmail.TrailingIcon = null;
+            this.txtEmail.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // txtPassword
             // 
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPassword.ForeColorCustom = System.Drawing.Color.LightGray;
+            this.txtPassword.IsPassword = false;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(465, 384);
+            this.txtPassword.Location = new System.Drawing.Point(409, 385);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(189, 50);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(344, 50);
             this.txtPassword.TabIndex = 30;
-            this.txtPassword.Text = "";
+            this.txtPassword.Text = "Mot de passe";
             this.txtPassword.TrailingIcon = null;
+            this.txtPassword.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // Login
             // 
@@ -175,15 +161,15 @@
             this.ClientSize = new System.Drawing.Size(1159, 656);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.picCat);
+            this.ForeColor = System.Drawing.Color.Gray;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,10 +182,8 @@
         private MaterialSkin.Controls.MaterialButton btnSignIn;
         private MaterialSkin.Controls.MaterialButton btnSignUp;
         private MaterialSkin.Controls.MaterialButton btnDebug;
-        private MaterialSkin.Controls.MaterialLabel lblEmail;
-        private MaterialSkin.Controls.MaterialLabel lblPassword;
-        private MaterialSkin.Controls.MaterialTextBox txtEmail;
-        private MaterialSkin.Controls.MaterialTextBox txtPassword;
+        private TextBoxForeColor.CustomMaterialTextBox txtEmail;
+        private TextBoxForeColor.CustomMaterialTextBox txtPassword;
     }
 }
 

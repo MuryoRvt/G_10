@@ -26,7 +26,7 @@ namespace P_Sante
 
             //views' instances
             Login aLogin = new Login();
-            Register aRegister = new Register();
+            Registration aRegister = new Registration();
             Interests aInterests = new Interests();
             MentalQuestions aMentalQuestions = new MentalQuestions();
 
