@@ -84,6 +84,12 @@
     <Compile Include="Views\PhysiqueQuestions.Designer.cs">
       <DependentUpon>PhysiqueQuestions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PhysiqueQuestions.resx">
       <DependentUpon>PhysiqueQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>

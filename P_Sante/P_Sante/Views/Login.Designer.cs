@@ -94,7 +94,7 @@
             this.btnDebug.Depth = 0;
             this.btnDebug.HighEmphasis = true;
             this.btnDebug.Icon = null;
-            this.btnDebug.Location = new System.Drawing.Point(1068, 70);
+            this.btnDebug.Location = new System.Drawing.Point(1038, 593);
             this.btnDebug.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDebug.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDebug.Name = "btnDebug";

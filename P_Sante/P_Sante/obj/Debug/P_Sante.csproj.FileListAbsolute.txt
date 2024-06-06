@@ -50,3 +50,4 @@ E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll
 E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.pdb
 E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll.config
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Registration.resources
+D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Profile.resources

@@ -30,12 +30,13 @@ namespace P_Sante
             Interests aInterests = new Interests();
             MentalQuestions aMentalQuestions = new MentalQuestions();
             PhysiqueQuestions aPhysiqueQuestions = new PhysiqueQuestions();
+            Profile aProfile = new Profile();
 
             //model's instance
             Model aModel = new Model();
 
             //controller's instance
-            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysiqueQuestions, aModel);
+            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysiqueQuestions, aProfile, aModel);
 
             Application.Run(aLogin);
         }
