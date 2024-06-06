@@ -168,6 +168,7 @@
             this.Name = "Interests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interests";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Interests_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.picPinguin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

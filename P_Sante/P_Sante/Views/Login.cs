@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using P_Sante.Controllers;
 using MaterialSkin.Controls;
 using TextBoxForeColor;
 
@@ -16,7 +15,7 @@ namespace P_Sante.Views
     public partial class Login : MaterialForm
     {
 
-        public Controller Controller { get; set; }
+        public Controllers.Controller Controller { get; set; }
 
         public Login()
         {
@@ -35,56 +34,46 @@ namespace P_Sante.Views
             this.Hide();
         }
 
-        private void txt_Enter(object sender, EventArgs e)
+        private void txtEmail_Enter(object sender, EventArgs e)
         {
-            CustomMaterialTextBox txtSender = (CustomMaterialTextBox)sender;
-            switch(txtSender)
+            if (txtEmail.Text == "E-mail")
             {
-                case CustomMaterialTextBox txtbox when txtbox == txtEmail:
-                    if (txtEmail.Text == "E-mail")
-                    {
-                        txtEmail.Text = "";
-                        txtEmail.ForeColorCustom = Color.Black;
-                    }
-                    break;
-                case CustomMaterialTextBox txtbox when txtbox == txtPassword:
-                    if (txtPassword.Text == "Mot de passe")
-                    {
-                        txtPassword.Text = "";
-                        txtPassword.ForeColorCustom = Color.Black;
-                        txtPassword.IsPassword = true;
-                    }
-                    break;
+                txtEmail.Text = "";
+                txtEmail.ForeColorCustom = Color.Black;
             }
         }
 
-        private void txt_Leave(object sender, EventArgs e)
+        private void txtPassword_Enter(object sender, EventArgs e)
         {
-            CustomMaterialTextBox txtSender = (CustomMaterialTextBox)sender;
-            switch (txtSender)
+            if (txtPassword.Text == "Mot de passe")
             {
-                case CustomMaterialTextBox txtbox when txtbox == txtEmail:
-                    if (txtEmail.Text == "")
-                    {
-                        txtEmail.Text = "E-mail";
-                        txtEmail.ForeColorCustom = Color.Gray;
-                    }
-                    break;
-                case CustomMaterialTextBox txtbox when txtbox == txtPassword:
-                    if (txtPassword.Text == "")
-                    {
-                        txtPassword.Text = "Mot de passe";
-                        txtPassword.ForeColorCustom = Color.Gray;
-                        txtPassword.IsPassword = false;
-                    }
-                    break;
+                txtPassword.PasswordChar = '•';
+                txtPassword.Text = "";
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "E-mail";
+                txtEmail.ForeColorCustom = Color.Gray;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.Text = "Mot de passe";
             }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             txtEmail.ForeColorCustom = Color.Gray;
-            txtPassword.ForeColorCustom = Color.Gray;
         }
     }
 }
+

@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using P_Sante.Controllers;
 
 namespace P_Sante.Views
 {
     public partial class MentalQuestions : MaterialSkin.Controls.MaterialForm
     {
 
-        public Controller Controller { get; set; }
+        public Controllers.Controller Controller { get; set; }
 
         public MentalQuestions()
         {
@@ -25,6 +24,17 @@ namespace P_Sante.Views
         {
             Controller.OpenInterests();
             this.Hide();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Controller.OpenPhysiqueQuestions();
+            this.Hide();
+        }
+
+        private void MentalQuestions_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

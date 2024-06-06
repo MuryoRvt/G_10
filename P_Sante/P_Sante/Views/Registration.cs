@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using P_Sante.Controllers;
 using TextBoxForeColor;
 
 namespace P_Sante.Views
@@ -17,7 +16,7 @@ namespace P_Sante.Views
         /// <summary>
         /// Controller to manage the views
         /// </summary>
-        public Controller Controller { get; set; }
+        public Controllers.Controller Controller { get; set; }
 
         public Registration()
         {
@@ -62,22 +61,23 @@ namespace P_Sante.Views
                         txtEmail.ForeColorCustom = Color.Black;
                     }
                     break;
-                case CustomMaterialTextBox txtbox4 when txtbox4 == txtPassword:
-                    if (txtPassword.Text == "Mot de passe")
-                    {
-                        txtPassword.Text = "";
-                        txtPassword.ForeColorCustom = Color.Black;
-                        txtPassword.IsPassword = true;
-                    }
-                    break;
-                case CustomMaterialTextBox txtbox5 when txtbox5 == txtRepeatPassword:
-                    if (txtRepeatPassword.Text == "Répétez le mdp")
-                    {
-                        txtRepeatPassword.Text = "";
-                        txtRepeatPassword.ForeColorCustom = Color.Black;
-                        txtRepeatPassword.IsPassword = true;
-                    }
-                    break;
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Mot de passe")
+            {
+                txtPassword.Text = "";
+                txtPassword.PasswordChar = '•';
+            }
+        }
+        private void txtRepeatPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtRepeatPassword.Text == "Répétez le mdp")
+            {
+                txtRepeatPassword.Text = "";
+                txtRepeatPassword.PasswordChar = '•';
             }
         }
 
@@ -107,22 +107,23 @@ namespace P_Sante.Views
                         txtEmail.ForeColorCustom = Color.Gray;
                     }
                     break;
-                case CustomMaterialTextBox txtbox4 when txtbox4 == txtPassword:
-                    if (txtPassword.Text == "")
-                    {
-                        txtPassword.Text = "Mot de passe";
-                        txtPassword.ForeColorCustom = Color.Gray;
-                        txtPassword.IsPassword = false;
-                    }
-                    break;
-                case CustomMaterialTextBox txtbox5 when txtbox5 == txtRepeatPassword:
-                    if (txtRepeatPassword.Text == "")
-                    {
-                        txtRepeatPassword.Text = "Répétez le mdp";
-                        txtRepeatPassword.ForeColorCustom = Color.Gray;
-                        txtRepeatPassword.IsPassword = false;
-                    }
-                    break;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.Text = "Mot de passe";
+            }
+        }
+        private void txtRepeatPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtRepeatPassword.Text == "")
+            {
+                txtRepeatPassword.PasswordChar = '\0';
+                txtRepeatPassword.Text = "Répétez le mdp";
             }
         }
 
@@ -131,8 +132,11 @@ namespace P_Sante.Views
             txtFirstName.ForeColorCustom = Color.Gray;
             txtLastName.ForeColorCustom = Color.Gray;
             txtEmail.ForeColorCustom = Color.Gray;
-            txtPassword.ForeColorCustom = Color.Gray;
-            txtRepeatPassword.ForeColorCustom = Color.Gray;
+        }
+
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

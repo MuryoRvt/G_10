@@ -352,6 +352,7 @@
             this.btnNext.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNext.UseAccentColor = false;
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrevious
             // 
@@ -396,6 +397,7 @@
             this.Name = "MentalQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MentalQuestions";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MentalQuestions_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitQuestions.Panel1.ResumeLayout(false);
             this.splitQuestions.Panel1.PerformLayout();

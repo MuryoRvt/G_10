@@ -37,7 +37,6 @@ E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Login.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Properties.Resources.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.MentalQuestions.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.PhysiqueQuestions.resources
-E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Register.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.GenerateResource.cache
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.CoreCompileInputs.cache
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.CopyComplete
@@ -47,3 +46,7 @@ D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.pdb
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll.config
 D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Registration.resources
+E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll
+E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.pdb
+E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll.config
+E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Registration.resources

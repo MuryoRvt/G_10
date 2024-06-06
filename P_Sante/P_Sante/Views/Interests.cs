@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using P_Sante.Controllers;
 
 namespace P_Sante.Views
 {
     public partial class Interests : MaterialSkin.Controls.MaterialForm
     {
 
-        public Controller Controller { get; set; }
+        public Controllers.Controller Controller { get; set; }
 
         public Interests()
         {
@@ -31,6 +30,11 @@ namespace P_Sante.Views
         {
             Controller.OpenLogin();
             this.Hide();
+        }
+
+        private void Interests_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
