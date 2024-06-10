@@ -28,7 +28,7 @@ namespace P_Sante.Views
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Controller.UpdateMentalData(cmbZeroToTen1.Text, (rdbYesFriends.Checked) ? rdbYesFriends.Text : rdbNoFriends.Text, (rdbYesAnxiety.Checked) ? rdbYesAnxiety.Text : rdbNoAnxiety.Text, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
+            Controller.UpdateMentalData(cmbZeroToTen1.Text, rdbYesFriends.Checked, rdbYesAnxiety.Checked, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
             Controller.OpenPhysiqueQuestions();
             this.Hide();
         }

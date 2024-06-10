@@ -22,14 +22,20 @@ namespace P_Sante.Views
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Controller.OpenMentalQuestions();
-            this.Hide();
-        }
+            if(chkActivities.Checked || chkAlimentation.Checked || chkMentalHealth.Checked || chkSleep.Checked)
+            {
+                Controller.UpdateInterests(chkMentalHealth.Checked, chkAlimentation.Checked, chkActivities.Checked, chkSleep.Checked);
+                if (Controller.CurrentUser().IntMentalHealth)
+                    Controller.OpenMentalQuestions();
+                else
+                    Controller.OpenPhysiqueQuestions();
 
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            Controller.OpenLogin();
-            this.Hide();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Choisissez qqch");
+            }
         }
 
         private void Interests_FormClosed(object sender, FormClosedEventArgs e)

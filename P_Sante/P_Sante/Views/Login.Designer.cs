@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picCat = new System.Windows.Forms.PictureBox();
             this.btnSignIn = new MaterialSkin.Controls.MaterialButton();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
-            this.btnDebug = new MaterialSkin.Controls.MaterialButton();
             this.txtEmail = new TextBoxForeColor.CustomMaterialTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.picCat = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picCat
-            // 
-            this.picCat.BackColor = System.Drawing.Color.Transparent;
-            this.picCat.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen;
-            this.picCat.Location = new System.Drawing.Point(409, 70);
-            this.picCat.Name = "picCat";
-            this.picCat.Size = new System.Drawing.Size(344, 294);
-            this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCat.TabIndex = 0;
-            this.picCat.TabStop = false;
             // 
             // btnSignIn
             // 
@@ -66,6 +58,7 @@
             this.btnSignIn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSignIn.UseAccentColor = false;
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnSignUp
             // 
@@ -86,26 +79,6 @@
             this.btnSignUp.UseAccentColor = false;
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
-            // btnDebug
-            // 
-            this.btnDebug.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDebug.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDebug.Depth = 0;
-            this.btnDebug.HighEmphasis = true;
-            this.btnDebug.Icon = null;
-            this.btnDebug.Location = new System.Drawing.Point(1038, 593);
-            this.btnDebug.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDebug.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDebug.Name = "btnDebug";
-            this.btnDebug.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDebug.Size = new System.Drawing.Size(76, 36);
-            this.btnDebug.TabIndex = 26;
-            this.btnDebug.Text = "Passer";
-            this.btnDebug.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDebug.UseAccentColor = false;
-            this.btnDebug.UseVisualStyleBackColor = true;
-            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // txtEmail
             // 
@@ -174,25 +147,63 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
+            // picCat
+            // 
+            this.picCat.BackColor = System.Drawing.Color.Transparent;
+            this.picCat.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen;
+            this.picCat.Location = new System.Drawing.Point(409, 70);
+            this.picCat.Name = "picCat";
+            this.picCat.Size = new System.Drawing.Size(344, 294);
+            this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCat.TabIndex = 0;
+            this.picCat.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::P_Sante.Properties.Resources.mer;
+            this.pictureBox1.Location = new System.Drawing.Point(-53, 497);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1233, 257);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::P_Sante.Properties.Resources.clouds;
+            this.pictureBox2.Location = new System.Drawing.Point(79, 255);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1006, 257);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1159, 656);
+            this.ClientSize = new System.Drawing.Size(1160, 673);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.picCat);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.Gray;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.VisibleChanged += new System.EventHandler(this.Login_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,9 +214,10 @@
         private System.Windows.Forms.PictureBox picCat;
         private MaterialSkin.Controls.MaterialButton btnSignIn;
         private MaterialSkin.Controls.MaterialButton btnSignUp;
-        private MaterialSkin.Controls.MaterialButton btnDebug;
         private TextBoxForeColor.CustomMaterialTextBox txtEmail;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

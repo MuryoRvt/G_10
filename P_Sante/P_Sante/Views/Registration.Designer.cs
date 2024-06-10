@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picGoose = new System.Windows.Forms.PictureBox();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.btnSignIn = new MaterialSkin.Controls.MaterialButton();
             this.txtEmail = new TextBoxForeColor.CustomMaterialTextBox();
@@ -36,19 +35,28 @@
             this.txtFirstName = new TextBoxForeColor.CustomMaterialTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtRepeatPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.lblDialog_Guide = new System.Windows.Forms.Label();
+            this.picRepeatPassword = new System.Windows.Forms.PictureBox();
+            this.picPassword = new System.Windows.Forms.PictureBox();
+            this.picEmail = new System.Windows.Forms.PictureBox();
+            this.picLastName = new System.Windows.Forms.PictureBox();
+            this.picFirstName = new System.Windows.Forms.PictureBox();
+            this.picGoose = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picRepeatPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picGoose
-            // 
-            this.picGoose.BackColor = System.Drawing.Color.Transparent;
-            this.picGoose.Image = global::P_Sante.Properties.Resources.duck_dancing_duck_unscreen;
-            this.picGoose.Location = new System.Drawing.Point(2, 117);
-            this.picGoose.Name = "picGoose";
-            this.picGoose.Size = new System.Drawing.Size(431, 434);
-            this.picGoose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picGoose.TabIndex = 5;
-            this.picGoose.TabStop = false;
             // 
             // btnSignUp
             // 
@@ -108,6 +116,7 @@
             this.txtEmail.TabIndex = 27;
             this.txtEmail.Text = "E-mail";
             this.txtEmail.TrailingIcon = null;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txt_TextChanged);
             this.txtEmail.Enter += new System.EventHandler(this.txt_Enter);
             this.txtEmail.Leave += new System.EventHandler(this.txt_Leave);
             // 
@@ -129,6 +138,7 @@
             this.txtLastName.TabIndex = 26;
             this.txtLastName.Text = "Nom";
             this.txtLastName.TrailingIcon = null;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txt_TextChanged);
             this.txtLastName.Enter += new System.EventHandler(this.txt_Enter);
             this.txtLastName.Leave += new System.EventHandler(this.txt_Leave);
             // 
@@ -150,6 +160,7 @@
             this.txtFirstName.TabIndex = 25;
             this.txtFirstName.Text = "Prénom";
             this.txtFirstName.TrailingIcon = null;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txt_TextChanged);
             this.txtFirstName.Enter += new System.EventHandler(this.txt_Enter);
             this.txtFirstName.Leave += new System.EventHandler(this.txt_Leave);
             // 
@@ -197,6 +208,7 @@
             this.txtPassword.ValidatingType = null;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtRepeatPassword
             // 
@@ -242,12 +254,144 @@
             this.txtRepeatPassword.ValidatingType = null;
             this.txtRepeatPassword.Enter += new System.EventHandler(this.txtRepeatPassword_Enter);
             this.txtRepeatPassword.Leave += new System.EventHandler(this.txtRepeatPassword_Leave);
+            this.txtRepeatPassword.TextChanged += new System.EventHandler(this.txtRepeatPassword_TextChanged);
+            // 
+            // lblDialog_Guide
+            // 
+            this.lblDialog_Guide.AutoSize = true;
+            this.lblDialog_Guide.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDialog_Guide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDialog_Guide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDialog_Guide.ForeColor = System.Drawing.Color.Black;
+            this.lblDialog_Guide.Location = new System.Drawing.Point(129, 104);
+            this.lblDialog_Guide.Name = "lblDialog_Guide";
+            this.lblDialog_Guide.Size = new System.Drawing.Size(95, 20);
+            this.lblDialog_Guide.TabIndex = 36;
+            this.lblDialog_Guide.Text = "Registration";
+            // 
+            // picRepeatPassword
+            // 
+            this.picRepeatPassword.Image = global::P_Sante.Properties.Resources.multiply;
+            this.picRepeatPassword.Location = new System.Drawing.Point(847, 375);
+            this.picRepeatPassword.Name = "picRepeatPassword";
+            this.picRepeatPassword.Size = new System.Drawing.Size(36, 34);
+            this.picRepeatPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRepeatPassword.TabIndex = 44;
+            this.picRepeatPassword.TabStop = false;
+            this.picRepeatPassword.Visible = false;
+            // 
+            // picPassword
+            // 
+            this.picPassword.Image = global::P_Sante.Properties.Resources.multiply;
+            this.picPassword.Location = new System.Drawing.Point(847, 319);
+            this.picPassword.Name = "picPassword";
+            this.picPassword.Size = new System.Drawing.Size(36, 34);
+            this.picPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPassword.TabIndex = 43;
+            this.picPassword.TabStop = false;
+            this.picPassword.Visible = false;
+            // 
+            // picEmail
+            // 
+            this.picEmail.Image = global::P_Sante.Properties.Resources.multiply;
+            this.picEmail.Location = new System.Drawing.Point(847, 263);
+            this.picEmail.Name = "picEmail";
+            this.picEmail.Size = new System.Drawing.Size(36, 34);
+            this.picEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEmail.TabIndex = 42;
+            this.picEmail.TabStop = false;
+            this.picEmail.Visible = false;
+            // 
+            // picLastName
+            // 
+            this.picLastName.Image = global::P_Sante.Properties.Resources.multiply;
+            this.picLastName.Location = new System.Drawing.Point(847, 206);
+            this.picLastName.Name = "picLastName";
+            this.picLastName.Size = new System.Drawing.Size(36, 34);
+            this.picLastName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLastName.TabIndex = 41;
+            this.picLastName.TabStop = false;
+            this.picLastName.Visible = false;
+            // 
+            // picFirstName
+            // 
+            this.picFirstName.Image = global::P_Sante.Properties.Resources.multiply;
+            this.picFirstName.Location = new System.Drawing.Point(848, 154);
+            this.picFirstName.Name = "picFirstName";
+            this.picFirstName.Size = new System.Drawing.Size(36, 34);
+            this.picFirstName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFirstName.TabIndex = 40;
+            this.picFirstName.TabStop = false;
+            this.picFirstName.Visible = false;
+            // 
+            // picGoose
+            // 
+            this.picGoose.BackColor = System.Drawing.Color.Transparent;
+            this.picGoose.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen__1__dialog;
+            this.picGoose.Location = new System.Drawing.Point(29, 154);
+            this.picGoose.Name = "picGoose";
+            this.picGoose.Size = new System.Drawing.Size(177, 143);
+            this.picGoose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGoose.TabIndex = 34;
+            this.picGoose.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::P_Sante.Properties.Resources.DialogCharacter;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(296, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::P_Sante.Properties.Resources.Nouage_removebg_preview__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(814, 295);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(61, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 37;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::P_Sante.Properties.Resources.Nouage_removebg_preview__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(466, 179);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::P_Sante.Properties.Resources.Plant_8Bit_removebg_preview__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(776, 88);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 61);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 656);
+            this.Controls.Add(this.picRepeatPassword);
+            this.Controls.Add(this.picPassword);
+            this.Controls.Add(this.picEmail);
+            this.Controls.Add(this.picLastName);
+            this.Controls.Add(this.picFirstName);
+            this.Controls.Add(this.lblDialog_Guide);
+            this.Controls.Add(this.picGoose);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtRepeatPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
@@ -255,21 +399,33 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.picGoose);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.Gray;
+            this.MaximizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.Load += new System.EventHandler(this.Registration_Load);
+            this.VisibleChanged += new System.EventHandler(this.Registration_VisibleChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.picRepeatPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox picGoose;
         private MaterialSkin.Controls.MaterialButton btnSignUp;
         private MaterialSkin.Controls.MaterialButton btnSignIn;
         private TextBoxForeColor.CustomMaterialTextBox txtFirstName;
@@ -277,5 +433,16 @@
         private TextBoxForeColor.CustomMaterialTextBox txtEmail;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtPassword;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtRepeatPassword;
+        private System.Windows.Forms.Label lblDialog_Guide;
+        private System.Windows.Forms.PictureBox picGoose;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picFirstName;
+        private System.Windows.Forms.PictureBox picLastName;
+        private System.Windows.Forms.PictureBox picEmail;
+        private System.Windows.Forms.PictureBox picPassword;
+        private System.Windows.Forms.PictureBox picRepeatPassword;
     }
 }

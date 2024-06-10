@@ -18,6 +18,10 @@ namespace P_Sante.Views
         /// </summary>
         public Controllers.Controller Controller { get; set; }
 
+        private Image check = Properties.Resources.check;
+
+        private Image nonCheck = Properties.Resources.multiply;
+
         public Registration()
         {
             InitializeComponent();
@@ -31,8 +35,16 @@ namespace P_Sante.Views
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            Controller.OpenLogin();
-            this.Hide();
+            if(Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check, picPassword.Image == check, picRepeatPassword.Image == check))
+            {
+                Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text);
+                Controller.OpenInterests();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("NON");
+            }
         }
 
         private void txt_Enter(object sender, EventArgs e)
@@ -89,22 +101,28 @@ namespace P_Sante.Views
                 case CustomMaterialTextBox txtbox1 when txtbox1 == txtFirstName:
                     if (txtFirstName.Text == "")
                     {
-                        txtFirstName.Text = "Prénom";
                         txtFirstName.ForeColorCustom = Color.Gray;
+                        txtFirstName.Text = "Prénom";
+                        picFirstName.Image = nonCheck;
+                        picFirstName.Visible = false;
                     }
                     break;
                 case CustomMaterialTextBox txtbox2 when txtbox2 == txtLastName:
                     if (txtLastName.Text == "")
                     {
-                        txtLastName.Text = "Nom";
                         txtLastName.ForeColorCustom = Color.Gray;
+                        txtLastName.Text = "Nom";
+                        picLastName.Image = nonCheck;
+                        picLastName.Visible = false;
                     }
                     break;
                 case CustomMaterialTextBox txtbox3 when txtbox3 == txtEmail:
                     if (txtEmail.Text == "")
                     {
-                        txtEmail.Text = "E-mail";
                         txtEmail.ForeColorCustom = Color.Gray;
+                        txtEmail.Text = "E-mail";
+                        picEmail.Image = nonCheck;
+                        picEmail.Visible = false;
                     }
                     break;
             }
@@ -116,6 +134,8 @@ namespace P_Sante.Views
             {
                 txtPassword.PasswordChar = '\0';
                 txtPassword.Text = "Mot de passe";
+                picPassword.Image = nonCheck;
+                picPassword.Visible = false;
             }
         }
         private void txtRepeatPassword_Leave(object sender, EventArgs e)
@@ -124,6 +144,8 @@ namespace P_Sante.Views
             {
                 txtRepeatPassword.PasswordChar = '\0';
                 txtRepeatPassword.Text = "Répétez le mdp";
+                picRepeatPassword.Image = nonCheck;
+                picRepeatPassword.Visible = false;
             }
         }
 
@@ -137,6 +159,98 @@ namespace P_Sante.Views
         private void Registration_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Registration_VisibleChanged(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "Prénom";
+            txtFirstName.ForeColorCustom = Color.Gray;
+            txtLastName.Text = "Nom";
+            txtLastName.ForeColorCustom = Color.Gray;
+            txtEmail.Text = "E-mail";
+            txtEmail.ForeColorCustom = Color.Gray;
+            txtPassword.PasswordChar = '\0';
+            txtPassword.Text = "Mot de passe";
+            txtRepeatPassword.PasswordChar = '\0';
+            txtRepeatPassword.Text = "Répétez le mdp";
+            picFirstName.Visible = false;
+            picLastName.Visible = false;
+            picEmail.Visible = false;
+            picPassword.Visible = false;
+            picRepeatPassword.Visible = false;
+        }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            CustomMaterialTextBox txtSender = (CustomMaterialTextBox)sender;
+            switch (txtSender)
+            {
+                case CustomMaterialTextBox txtbox1 when txtbox1 == txtFirstName:
+                    if (Controller.NameCheck(txtFirstName.Text) && txtFirstName.ForeColorCustom != Color.Gray)
+                    {
+                        picFirstName.Visible = true;
+                        picFirstName.Image = check;
+                    }
+                    else
+                    {
+                        picFirstName.Image = nonCheck;
+                    }
+                    break;
+                case CustomMaterialTextBox txtbox2 when txtbox2 == txtLastName:
+                    if (Controller.NameCheck(txtLastName.Text) && txtLastName.ForeColorCustom != Color.Gray)
+                    {
+                        picLastName.Visible = true;
+                        picLastName.Image = check;
+                    }
+                    else
+                    {
+                        picLastName.Image = nonCheck;
+                    }
+                    break;
+                case CustomMaterialTextBox txtbox3 when txtbox3 == txtEmail:
+                    if (Controller.EmailCheck(txtEmail.Text) && txtEmail.ForeColorCustom != Color.Gray)
+                    {
+                        picEmail.Visible = true;
+                        picEmail.Image = check;
+                    }
+                    else
+                    {
+                        picEmail.Image = nonCheck;
+                    }
+                    break;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                picPassword.Visible = true;
+            }
+            if (Controller.PasswordCheck(txtPassword.Text))
+            {
+                picPassword.Image = check;
+            }
+            else
+            {
+                picPassword.Image = nonCheck;
+            }
+        }
+
+        private void txtRepeatPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRepeatPassword.PasswordChar == '\0')
+            {
+                picRepeatPassword.Visible = true;
+            }
+            if (Controller.PasswordCheck(txtRepeatPassword.Text) && txtRepeatPassword.Text == txtPassword.Text)
+            {
+                picRepeatPassword.Image = check;
+            }
+            else
+            {
+                picRepeatPassword.Image = nonCheck;
+            }
         }
     }
 }

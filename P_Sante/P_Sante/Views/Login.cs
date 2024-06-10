@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
-using TextBoxForeColor;
 
 namespace P_Sante.Views
 {
@@ -72,7 +71,32 @@ namespace P_Sante.Views
 
         private void Login_Load(object sender, EventArgs e)
         {
+            Controller.UpdateUsers();
             txtEmail.ForeColorCustom = Color.Gray;
+            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Green400, MaterialSkin.Primary.Green500, MaterialSkin.Primary.Brown50, MaterialSkin.Accent.DeepOrange200, MaterialSkin.TextShade.WHITE);
+
+        }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            if(Controller.CheckUser(txtEmail.Text, txtPassword.Text))
+            {
+                Controller.OpenProfile();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Email ou mdp ne sont pas justes");
+            }
+        }
+
+        private void Login_VisibleChanged(object sender, EventArgs e)
+        {
+            txtEmail.Text = "E-mail";
+            txtEmail.ForeColorCustom = Color.Gray;
+            txtPassword.PasswordChar = '\0';
+            txtPassword.Text = "Mot de passe";
         }
     }
 }

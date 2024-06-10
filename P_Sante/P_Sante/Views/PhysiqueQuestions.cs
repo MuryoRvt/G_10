@@ -51,8 +51,9 @@ namespace P_Sante.Views
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Controller.OpenProfile();
-            this.Hide();
+            Controller.UpdatePhysicalData(rdbYesSleep.Checked, rdbYesExercises.Checked, rdbYesWater.Checked, cmbZeroToTen.Text, rdbYesMedicines.Checked, txtMedecines1.Text, txtMedecines2.Text, txtMedecines3.Text);
+            Controller.AddUser();
+            Controller.OpenDialog();
         }
     }
 }

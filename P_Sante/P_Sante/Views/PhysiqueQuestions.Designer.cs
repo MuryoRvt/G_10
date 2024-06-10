@@ -37,7 +37,7 @@
             this.txtMedecines3 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMedecines2 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMedecines1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.cmbZeroToTen2 = new MaterialSkin.Controls.MaterialComboBox();
+            this.cmbZeroToTen = new MaterialSkin.Controls.MaterialComboBox();
             this.lblQP4 = new MaterialSkin.Controls.MaterialLabel();
             this.lblQP5 = new MaterialSkin.Controls.MaterialLabel();
             this.lblQP3 = new MaterialSkin.Controls.MaterialLabel();
@@ -210,21 +210,21 @@
             this.txtMedecines1.TrailingIcon = null;
             this.txtMedecines1.Visible = false;
             // 
-            // cmbZeroToTen2
+            // cmbZeroToTen
             // 
-            this.cmbZeroToTen2.AutoResize = false;
-            this.cmbZeroToTen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cmbZeroToTen2.Depth = 0;
-            this.cmbZeroToTen2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbZeroToTen2.DropDownHeight = 174;
-            this.cmbZeroToTen2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbZeroToTen2.DropDownWidth = 121;
-            this.cmbZeroToTen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cmbZeroToTen2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cmbZeroToTen2.FormattingEnabled = true;
-            this.cmbZeroToTen2.IntegralHeight = false;
-            this.cmbZeroToTen2.ItemHeight = 43;
-            this.cmbZeroToTen2.Items.AddRange(new object[] {
+            this.cmbZeroToTen.AutoResize = false;
+            this.cmbZeroToTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbZeroToTen.Depth = 0;
+            this.cmbZeroToTen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbZeroToTen.DropDownHeight = 174;
+            this.cmbZeroToTen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbZeroToTen.DropDownWidth = 121;
+            this.cmbZeroToTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbZeroToTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbZeroToTen.FormattingEnabled = true;
+            this.cmbZeroToTen.IntegralHeight = false;
+            this.cmbZeroToTen.ItemHeight = 43;
+            this.cmbZeroToTen.Items.AddRange(new object[] {
             "0",
             "1",
             "2",
@@ -236,13 +236,13 @@
             "8",
             "9",
             "10"});
-            this.cmbZeroToTen2.Location = new System.Drawing.Point(559, 339);
-            this.cmbZeroToTen2.MaxDropDownItems = 4;
-            this.cmbZeroToTen2.MouseState = MaterialSkin.MouseState.OUT;
-            this.cmbZeroToTen2.Name = "cmbZeroToTen2";
-            this.cmbZeroToTen2.Size = new System.Drawing.Size(121, 49);
-            this.cmbZeroToTen2.StartIndex = 0;
-            this.cmbZeroToTen2.TabIndex = 38;
+            this.cmbZeroToTen.Location = new System.Drawing.Point(559, 339);
+            this.cmbZeroToTen.MaxDropDownItems = 4;
+            this.cmbZeroToTen.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbZeroToTen.Name = "cmbZeroToTen";
+            this.cmbZeroToTen.Size = new System.Drawing.Size(121, 49);
+            this.cmbZeroToTen.StartIndex = 0;
+            this.cmbZeroToTen.TabIndex = 38;
             // 
             // lblQP4
             // 
@@ -477,13 +477,14 @@
             this.Controls.Add(this.txtMedecines3);
             this.Controls.Add(this.txtMedecines2);
             this.Controls.Add(this.txtMedecines1);
-            this.Controls.Add(this.cmbZeroToTen2);
+            this.Controls.Add(this.cmbZeroToTen);
             this.Controls.Add(this.lblQP4);
             this.Controls.Add(this.lblQP5);
             this.Controls.Add(this.lblQP3);
             this.Controls.Add(this.lblQP2);
             this.Controls.Add(this.lblQP1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "PhysiqueQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhysiqueQuestions";
@@ -515,7 +516,7 @@
         private MaterialSkin.Controls.MaterialTextBox txtMedecines3;
         private MaterialSkin.Controls.MaterialTextBox txtMedecines2;
         private MaterialSkin.Controls.MaterialTextBox txtMedecines1;
-        private MaterialSkin.Controls.MaterialComboBox cmbZeroToTen2;
+        private MaterialSkin.Controls.MaterialComboBox cmbZeroToTen;
         private MaterialSkin.Controls.MaterialLabel lblQP4;
         private MaterialSkin.Controls.MaterialLabel lblQP5;
         private MaterialSkin.Controls.MaterialLabel lblQP3;
