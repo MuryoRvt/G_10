@@ -23,6 +23,7 @@ namespace P_Sante.Views
         private void btnYes_Click(object sender, EventArgs e)
         {
             Controller.InsertData();
+            Controller.AddUser();
             Controller.OpenProfile();
             this.Hide();
             Controller.HidePhysiqueQuestions();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitQuestions = new System.Windows.Forms.SplitContainer();
             this.rdbNoExercises = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbYesExercises = new MaterialSkin.Controls.MaterialRadioButton();
@@ -51,9 +50,11 @@
             this.rdbNoMedecines = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbYesMedicines = new MaterialSkin.Controls.MaterialRadioButton();
             this.lblQP6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialScrollBar1 = new MaterialSkin.Controls.MaterialScrollBar();
             this.btnNext = new MaterialSkin.Controls.MaterialButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblHeight = new MaterialSkin.Controls.MaterialLabel();
+            this.txtHeight = new MaterialSkin.Controls.MaterialTextBox();
+            this.lblWeight = new MaterialSkin.Controls.MaterialLabel();
+            this.txtWeight = new MaterialSkin.Controls.MaterialTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitQuestions)).BeginInit();
             this.splitQuestions.Panel1.SuspendLayout();
             this.splitQuestions.Panel2.SuspendLayout();
@@ -62,20 +63,10 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // splitQuestions
             // 
             this.splitQuestions.IsSplitterFixed = true;
-            this.splitQuestions.Location = new System.Drawing.Point(559, 181);
+            this.splitQuestions.Location = new System.Drawing.Point(372, 182);
             this.splitQuestions.Name = "splitQuestions";
             this.splitQuestions.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -163,7 +154,7 @@
             this.txtMedecines3.Depth = 0;
             this.txtMedecines3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMedecines3.LeadingIcon = null;
-            this.txtMedecines3.Location = new System.Drawing.Point(557, 588);
+            this.txtMedecines3.Location = new System.Drawing.Point(370, 589);
             this.txtMedecines3.MaxLength = 50;
             this.txtMedecines3.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMedecines3.Multiline = false;
@@ -181,7 +172,7 @@
             this.txtMedecines2.Depth = 0;
             this.txtMedecines2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMedecines2.LeadingIcon = null;
-            this.txtMedecines2.Location = new System.Drawing.Point(559, 532);
+            this.txtMedecines2.Location = new System.Drawing.Point(372, 533);
             this.txtMedecines2.MaxLength = 50;
             this.txtMedecines2.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMedecines2.Multiline = false;
@@ -199,7 +190,7 @@
             this.txtMedecines1.Depth = 0;
             this.txtMedecines1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMedecines1.LeadingIcon = null;
-            this.txtMedecines1.Location = new System.Drawing.Point(559, 476);
+            this.txtMedecines1.Location = new System.Drawing.Point(372, 477);
             this.txtMedecines1.MaxLength = 50;
             this.txtMedecines1.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMedecines1.Multiline = false;
@@ -236,7 +227,7 @@
             "8",
             "9",
             "10"});
-            this.cmbZeroToTen.Location = new System.Drawing.Point(559, 339);
+            this.cmbZeroToTen.Location = new System.Drawing.Point(372, 340);
             this.cmbZeroToTen.MaxDropDownItems = 4;
             this.cmbZeroToTen.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbZeroToTen.Name = "cmbZeroToTen";
@@ -249,7 +240,7 @@
             this.lblQP4.AutoSize = true;
             this.lblQP4.Depth = 0;
             this.lblQP4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblQP4.Location = new System.Drawing.Point(312, 352);
+            this.lblQP4.Location = new System.Drawing.Point(125, 353);
             this.lblQP4.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP4.Name = "lblQP4";
             this.lblQP4.Size = new System.Drawing.Size(241, 19);
@@ -263,7 +254,7 @@
             this.lblQP5.Depth = 0;
             this.lblQP5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblQP5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblQP5.Location = new System.Drawing.Point(234, 410);
+            this.lblQP5.Location = new System.Drawing.Point(47, 411);
             this.lblQP5.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP5.Name = "lblQP5";
             this.lblQP5.Size = new System.Drawing.Size(319, 19);
@@ -277,7 +268,7 @@
             this.lblQP3.Depth = 0;
             this.lblQP3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblQP3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblQP3.Location = new System.Drawing.Point(261, 282);
+            this.lblQP3.Location = new System.Drawing.Point(74, 283);
             this.lblQP3.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP3.Name = "lblQP3";
             this.lblQP3.Size = new System.Drawing.Size(292, 19);
@@ -291,7 +282,7 @@
             this.lblQP2.Depth = 0;
             this.lblQP2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblQP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblQP2.Location = new System.Drawing.Point(272, 209);
+            this.lblQP2.Location = new System.Drawing.Point(85, 210);
             this.lblQP2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP2.Name = "lblQP2";
             this.lblQP2.Size = new System.Drawing.Size(281, 19);
@@ -305,7 +296,7 @@
             this.lblQP1.Depth = 0;
             this.lblQP1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblQP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblQP1.Location = new System.Drawing.Point(324, 144);
+            this.lblQP1.Location = new System.Drawing.Point(137, 145);
             this.lblQP1.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP1.Name = "lblQP1";
             this.lblQP1.Size = new System.Drawing.Size(229, 19);
@@ -336,7 +327,7 @@
             // 
             this.panel1.Controls.Add(this.rdbNoSleep);
             this.panel1.Controls.Add(this.rdbYesSleep);
-            this.panel1.Location = new System.Drawing.Point(559, 118);
+            this.panel1.Location = new System.Drawing.Point(372, 119);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 57);
             this.panel1.TabIndex = 44;
@@ -377,7 +368,7 @@
             // 
             this.panel2.Controls.Add(this.rdbNoMedecines);
             this.panel2.Controls.Add(this.rdbYesMedicines);
-            this.panel2.Location = new System.Drawing.Point(559, 394);
+            this.panel2.Location = new System.Drawing.Point(372, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(209, 57);
             this.panel2.TabIndex = 45;
@@ -422,24 +413,13 @@
             this.lblQP6.Depth = 0;
             this.lblQP6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblQP6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblQP6.Location = new System.Drawing.Point(454, 479);
+            this.lblQP6.Location = new System.Drawing.Point(267, 480);
             this.lblQP6.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblQP6.Name = "lblQP6";
             this.lblQP6.Size = new System.Drawing.Size(99, 19);
             this.lblQP6.TabIndex = 46;
             this.lblQP6.Text = "Listez-les, svp";
             this.lblQP6.Visible = false;
-            // 
-            // materialScrollBar1
-            // 
-            this.materialScrollBar1.Depth = 0;
-            this.materialScrollBar1.Location = new System.Drawing.Point(1127, 67);
-            this.materialScrollBar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialScrollBar1.Name = "materialScrollBar1";
-            this.materialScrollBar1.Orientation = MaterialSkin.Controls.MaterialScrollOrientation.Vertical;
-            this.materialScrollBar1.Size = new System.Drawing.Size(10, 584);
-            this.materialScrollBar1.TabIndex = 47;
-            this.materialScrollBar1.Text = "materialScrollBar1";
             // 
             // btnNext
             // 
@@ -461,14 +441,79 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeight.Depth = 0;
+            this.lblHeight.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHeight.Location = new System.Drawing.Point(686, 137);
+            this.lblHeight.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(113, 19);
+            this.lblHeight.TabIndex = 49;
+            this.lblHeight.Text = "Votre taille (cm)";
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.AnimateReadOnly = false;
+            this.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHeight.Depth = 0;
+            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtHeight.LeadingIcon = null;
+            this.txtHeight.Location = new System.Drawing.Point(805, 119);
+            this.txtHeight.MaxLength = 50;
+            this.txtHeight.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtHeight.Multiline = false;
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(92, 50);
+            this.txtHeight.TabIndex = 50;
+            this.txtHeight.Text = "";
+            this.txtHeight.TrailingIcon = null;
+            // 
+            // lblWeight
+            // 
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.BackColor = System.Drawing.Color.Transparent;
+            this.lblWeight.Depth = 0;
+            this.lblWeight.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblWeight.Location = new System.Drawing.Point(686, 200);
+            this.lblWeight.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(113, 19);
+            this.lblWeight.TabIndex = 51;
+            this.lblWeight.Text = "Votre poids (kg)";
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.AnimateReadOnly = false;
+            this.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtWeight.Depth = 0;
+            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtWeight.LeadingIcon = null;
+            this.txtWeight.Location = new System.Drawing.Point(805, 187);
+            this.txtWeight.MaxLength = 50;
+            this.txtWeight.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtWeight.Multiline = false;
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(92, 50);
+            this.txtWeight.TabIndex = 52;
+            this.txtWeight.Text = "";
+            this.txtWeight.TrailingIcon = null;
+            // 
             // PhysiqueQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1143, 656);
+            this.Controls.Add(this.txtWeight);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.txtHeight);
+            this.Controls.Add(this.lblHeight);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.materialScrollBar1);
             this.Controls.Add(this.lblQP6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -483,13 +528,12 @@
             this.Controls.Add(this.lblQP3);
             this.Controls.Add(this.lblQP2);
             this.Controls.Add(this.lblQP1);
-            this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "PhysiqueQuestions";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhysiqueQuestions";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PhysiqueQuestions_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitQuestions.Panel1.ResumeLayout(false);
             this.splitQuestions.Panel1.PerformLayout();
             this.splitQuestions.Panel2.ResumeLayout(false);
@@ -506,8 +550,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitQuestions;
         private MaterialSkin.Controls.MaterialRadioButton rdbNoExercises;
         private MaterialSkin.Controls.MaterialRadioButton rdbYesExercises;
@@ -530,7 +572,10 @@
         private MaterialSkin.Controls.MaterialRadioButton rdbNoMedecines;
         private MaterialSkin.Controls.MaterialRadioButton rdbYesMedicines;
         private MaterialSkin.Controls.MaterialLabel lblQP6;
-        private MaterialSkin.Controls.MaterialScrollBar materialScrollBar1;
         private MaterialSkin.Controls.MaterialButton btnNext;
+        private MaterialSkin.Controls.MaterialLabel lblHeight;
+        private MaterialSkin.Controls.MaterialTextBox txtHeight;
+        private MaterialSkin.Controls.MaterialLabel lblWeight;
+        private MaterialSkin.Controls.MaterialTextBox txtWeight;
     }
 }

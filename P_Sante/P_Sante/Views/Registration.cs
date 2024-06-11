@@ -29,7 +29,7 @@ namespace P_Sante.Views
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            Controller.OpenLogin();
+            Controller.OpenLogin(this);
             this.Hide();
         }
 
@@ -37,8 +37,8 @@ namespace P_Sante.Views
         {
             if(Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check, picPassword.Image == check, picRepeatPassword.Image == check))
             {
-                Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text);
-                Controller.OpenInterests();
+                Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, txtPassword.Text);
+                Controller.OpenInterests(this);
                 this.Hide();
             }
             else
@@ -186,9 +186,12 @@ namespace P_Sante.Views
             switch (txtSender)
             {
                 case CustomMaterialTextBox txtbox1 when txtbox1 == txtFirstName:
-                    if (Controller.NameCheck(txtFirstName.Text) && txtFirstName.ForeColorCustom != Color.Gray)
+                    if (txtFirstName.ForeColorCustom != Color.Gray)
                     {
                         picFirstName.Visible = true;
+                    }
+                    if (Controller.NameCheck(txtFirstName.Text))
+                    {
                         picFirstName.Image = check;
                     }
                     else
@@ -197,9 +200,12 @@ namespace P_Sante.Views
                     }
                     break;
                 case CustomMaterialTextBox txtbox2 when txtbox2 == txtLastName:
-                    if (Controller.NameCheck(txtLastName.Text) && txtLastName.ForeColorCustom != Color.Gray)
+                    if (txtLastName.ForeColorCustom != Color.Gray)
                     {
                         picLastName.Visible = true;
+                    }
+                    if (Controller.NameCheck(txtLastName.Text))
+                    {
                         picLastName.Image = check;
                     }
                     else
@@ -208,9 +214,12 @@ namespace P_Sante.Views
                     }
                     break;
                 case CustomMaterialTextBox txtbox3 when txtbox3 == txtEmail:
-                    if (Controller.EmailCheck(txtEmail.Text) && txtEmail.ForeColorCustom != Color.Gray)
+                    if(txtEmail.ForeColorCustom != Color.Gray)
                     {
                         picEmail.Visible = true;
+                    }
+                    if (Controller.EmailCheck(txtEmail.Text))
+                    {
                         picEmail.Image = check;
                     }
                     else

@@ -16,17 +16,15 @@ namespace P_Sante.Classes
 
         public string Email { get; set; }
 
+        public string Country { get; set; }
+
         public string Password { get; set; }
 
         //interests
 
         public bool IntMentalHealth { get; set; }
 
-        public bool IntAlimentation { get; set; }
-
-        public bool IntPhysicalActivity { get; set; }
-
-        public bool IntSleep { get; set; }
+        public bool IntPhysicalHealth { get; set; }
 
         //mental health
 
@@ -63,6 +61,10 @@ namespace P_Sante.Classes
         public string Medicines2 { get; set; }
 
         public string Medicines3 { get; set; }
+
+        public int Height { get; set; }
+
+        public int Weight { get; set; }
 
         public int PhysicalScore { get; set; }
     }

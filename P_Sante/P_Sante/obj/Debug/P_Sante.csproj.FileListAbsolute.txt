@@ -135,3 +135,4 @@ C:\Users\pn63pgk\Downloads\P_Sante_Update\P_Sante\P_Sante\obj\Debug\P_Sante.pdb
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.pdb
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll.config
+D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Contact.resources

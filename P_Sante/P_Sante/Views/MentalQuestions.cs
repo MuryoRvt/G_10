@@ -22,15 +22,22 @@ namespace P_Sante.Views
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            Controller.OpenInterests();
+            Controller.OpenInterests(this);
             this.Hide();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             Controller.UpdateMentalData(cmbZeroToTen1.Text, rdbYesFriends.Checked, rdbYesAnxiety.Checked, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
-            Controller.OpenPhysiqueQuestions();
-            this.Hide();
+            if(Controller.CurrentUser().IntPhysicalHealth)
+            {
+                Controller.OpenPhysiqueQuestions(this);
+            }
+            else
+            {
+                Controller.OpenDialog(this);
+            }
+            //this.Hide();
         }
 
         private void MentalQuestions_FormClosed(object sender, FormClosedEventArgs e)

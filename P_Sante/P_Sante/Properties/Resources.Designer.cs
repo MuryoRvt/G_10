@@ -63,16 +63,6 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BlueCircle {
-            get {
-                object obj = ResourceManager.GetObject("BlueCircle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bongo_cat_unscreen {
             get {
                 object obj = ResourceManager.GetObject("bongo-cat-unscreen", resourceCulture);
@@ -96,16 +86,6 @@ namespace P_Sante.Properties {
         internal static System.Drawing.Bitmap cercle_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("cercle_removebg_preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CercleRouge {
-            get {
-                object obj = ResourceManager.GetObject("CercleRouge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,16 +293,6 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngwing_com {
-            get {
-                object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pngwing_com__3___1_ {
             get {
                 object obj = ResourceManager.GetObject("pngwing_com__3___1_", resourceCulture);
@@ -346,6 +316,26 @@ namespace P_Sante.Properties {
         internal static System.Drawing.Bitmap rpgscene_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("rpgscene_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Termo8Bits {
+            get {
+                object obj = ResourceManager.GetObject("Termo8Bits", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Termo8BitsAzul {
+            get {
+                object obj = ResourceManager.GetObject("Termo8BitsAzul", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

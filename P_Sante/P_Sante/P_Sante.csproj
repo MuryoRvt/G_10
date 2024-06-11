@@ -125,6 +125,12 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Views\Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DialogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DialogWindow.resx">
       <DependentUpon>DialogWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,12 +246,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CercleRouge.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DialogCharacter.png" />
@@ -314,7 +317,10 @@
     <None Include="Resources\check.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BlueCircle.png" />
+    <None Include="Resources\Termo8Bits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Termo8BitsAzul.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

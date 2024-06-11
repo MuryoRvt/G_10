@@ -23,13 +23,13 @@ namespace P_Sante.Views
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            Controller.OpenRegister();
+            Controller.OpenRegister(this);
             this.Hide();
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
         {
-            Controller.OpenInterests();
+            Controller.OpenInterests(this);
             this.Hide();
         }
 
@@ -82,7 +82,7 @@ namespace P_Sante.Views
         {
             if(Controller.CheckUser(txtEmail.Text, txtPassword.Text))
             {
-                Controller.OpenProfile();
+                Controller.OpenProfile(this);
                 this.Hide();
             }
             else

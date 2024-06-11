@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P_Sante.Controllers;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using P_Sante.Classes;
 
@@ -36,19 +35,18 @@ namespace P_Sante.Models
                 {
                     conn.Open();
 
-                    string sql = "INSERT INTO t_user (useFirstName, useLastName, useEmail, usePassword, useIntMentalHealth, useIntAlimentation, useIntPhysicalActivity, useIntSleep, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3) " +
-                                 "VALUES(@FirstName, @LastName, @Email, @Password, @IntMentalHealth, @IntAlimentation, @IntPhysicalActivity, @IntSleep, @State, @Friends, @Anxiety, @EaseToRelate, @Favourites1, @Favourites2, @Favourites3, @Sleep, @Exercises, @Water, @FoodQuality, @Medicines, @Medicines1, @Medicines2, @Medicines3)";
+                    string sql = "INSERT INTO t_user (useFirstName, useLastName, useEmail, useCountry, usePassword, useIntMentalHealth, useIntPhysicalHealth, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3, useHeight, useWeight) " +
+                                 "VALUES(@FirstName, @LastName, @Email, @Country, @Password, @IntMentalHealth, @IntPhysicalHealth, @State, @Friends, @Anxiety, @EaseToRelate, @Favourites1, @Favourites2, @Favourites3, @Sleep, @Exercises, @Water, @FoodQuality, @Medicines, @Medicines1, @Medicines2, @Medicines3, @Height, @Weight)";
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@FirstName", currentUser.FirstName);
                         cmd.Parameters.AddWithValue("@LastName", currentUser.LastName);
                         cmd.Parameters.AddWithValue("@Email", currentUser.Email);
+                        cmd.Parameters.AddWithValue("@Country", currentUser.Country);
                         cmd.Parameters.AddWithValue("@Password", currentUser.Password);
                         cmd.Parameters.AddWithValue("@IntMentalHealth", currentUser.IntMentalHealth);
-                        cmd.Parameters.AddWithValue("@IntAlimentation", currentUser.IntAlimentation);
-                        cmd.Parameters.AddWithValue("@IntPhysicalActivity", currentUser.IntPhysicalActivity);
-                        cmd.Parameters.AddWithValue("@IntSleep", currentUser.IntSleep);
+                        cmd.Parameters.AddWithValue("@IntPhysicalHealth", currentUser.IntPhysicalHealth);
                         cmd.Parameters.AddWithValue("@State", currentUser.State);
                         cmd.Parameters.AddWithValue("@Friends", currentUser.Friends);
                         cmd.Parameters.AddWithValue("@Anxiety", currentUser.Anxiety);
@@ -64,6 +62,8 @@ namespace P_Sante.Models
                         cmd.Parameters.AddWithValue("@Medicines1", currentUser.Medicines1);
                         cmd.Parameters.AddWithValue("@Medicines2", currentUser.Medicines2);
                         cmd.Parameters.AddWithValue("@Medicines3", currentUser.Medicines3);
+                        cmd.Parameters.AddWithValue("@Height", currentUser.Height);
+                        cmd.Parameters.AddWithValue("@Weight", currentUser.Weight);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -86,7 +86,7 @@ namespace P_Sante.Models
                 try
                 {
                     conn.Open();
-                    string sql = "SELECT useFirstName, useLastName, useEmail, usePassword, useIntMentalHealth, useIntAlimentation, useIntPhysicalActivity, useIntSleep, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3 FROM t_user";
+                    string sql = "SELECT useFirstName, useLastName, useEmail, useCountry, usePassword, useIntMentalHealth, useIntPhysicalHealth, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3, useHeight, useWeight FROM t_user";
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
@@ -99,11 +99,10 @@ namespace P_Sante.Models
                                     FirstName = rdr["useFirstName"].ToString(),
                                     LastName = rdr["useLastName"].ToString(),
                                     Email = rdr["useEmail"].ToString(),
+                                    Country = rdr["useCountry"].ToString(),
                                     Password = rdr["usePassword"].ToString(),
                                     IntMentalHealth = Convert.ToBoolean(rdr["useIntMentalHealth"]),
-                                    IntAlimentation = Convert.ToBoolean(rdr["useIntAlimentation"]),
-                                    IntPhysicalActivity = Convert.ToBoolean(rdr["useIntPhysicalActivity"]),
-                                    IntSleep = Convert.ToBoolean(rdr["useIntSleep"]),
+                                    IntPhysicalHealth = Convert.ToBoolean(rdr["useIntPhysicalHealth"]),
                                     State = Convert.ToByte(rdr["useState"]),
                                     Friends = Convert.ToBoolean(rdr["useFriends"]),
                                     Anxiety = Convert.ToBoolean(rdr["useAnxiety"]),
@@ -118,7 +117,9 @@ namespace P_Sante.Models
                                     Medicines = Convert.ToBoolean(rdr["useMedicines"]),
                                     Medicines1 = rdr["useMedicines1"].ToString(),
                                     Medicines2 = rdr["useMedicines2"].ToString(),
-                                    Medicines3 = rdr["useMedicines3"].ToString()
+                                    Medicines3 = rdr["useMedicines3"].ToString(),
+                                    Height = Convert.ToInt32(rdr["useHeight"]),
+                                    Weight = Convert.ToInt32(rdr["useWeight"])
                                 };
 
                                 users.Add(user);
@@ -131,7 +132,6 @@ namespace P_Sante.Models
                     Console.WriteLine(ex.ToString());
                 }
             }
-
             return users;
         }
     }

@@ -124,23 +124,20 @@
   <data name="duck-dancing-duck-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duck-dancing-duck-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giphy-ezgif.com-webp-to-gif-converter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giphy-ezgif.com-webp-to-gif-converter1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Mushh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mushh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngwing_com__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngwing.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="giphy-ezgif.com-webp-to-gif-converter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy-ezgif.com-webp-to-gif-converter1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Termo8Bits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Termo8Bits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="duck_dancingd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duck-dancingd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CercleRouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CercleRouge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="multiply" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiply.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +199,7 @@
   <data name="bongo_cat_unscreen__1__dialog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bongo-cat-unscreen (1) dialog.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlueCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlueCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Termo8BitsAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Termo8BitsAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

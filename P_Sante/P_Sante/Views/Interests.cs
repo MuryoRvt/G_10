@@ -22,13 +22,13 @@ namespace P_Sante.Views
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(chkActivities.Checked || chkAlimentation.Checked || chkMentalHealth.Checked || chkSleep.Checked)
+            if(chkPhysHealth.Checked || chkMentalHealth.Checked)
             {
-                Controller.UpdateInterests(chkMentalHealth.Checked, chkAlimentation.Checked, chkActivities.Checked, chkSleep.Checked);
+                Controller.UpdateInterests(chkMentalHealth.Checked, chkPhysHealth.Checked);
                 if (Controller.CurrentUser().IntMentalHealth)
-                    Controller.OpenMentalQuestions();
+                    Controller.OpenMentalQuestions(this);
                 else
-                    Controller.OpenPhysiqueQuestions();
+                    Controller.OpenPhysiqueQuestions(this);
 
                 this.Hide();
             }

@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interests));
             this.btnNext = new MaterialSkin.Controls.MaterialButton();
             this.chkMentalHealth = new MaterialSkin.Controls.MaterialCheckbox();
-            this.chkAlimentation = new MaterialSkin.Controls.MaterialCheckbox();
-            this.chkActivities = new MaterialSkin.Controls.MaterialCheckbox();
-            this.chkSleep = new MaterialSkin.Controls.MaterialCheckbox();
+            this.chkPhysHealth = new MaterialSkin.Controls.MaterialCheckbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picPinguin = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -82,53 +80,21 @@
             this.chkMentalHealth.Text = "Santé mental";
             this.chkMentalHealth.UseVisualStyleBackColor = true;
             // 
-            // chkAlimentation
+            // chkPhysHealth
             // 
-            this.chkAlimentation.AutoSize = true;
-            this.chkAlimentation.Depth = 0;
-            this.chkAlimentation.Location = new System.Drawing.Point(437, 268);
-            this.chkAlimentation.Margin = new System.Windows.Forms.Padding(0);
-            this.chkAlimentation.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkAlimentation.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkAlimentation.Name = "chkAlimentation";
-            this.chkAlimentation.ReadOnly = false;
-            this.chkAlimentation.Ripple = true;
-            this.chkAlimentation.Size = new System.Drawing.Size(125, 37);
-            this.chkAlimentation.TabIndex = 35;
-            this.chkAlimentation.Text = "Alimentation";
-            this.chkAlimentation.UseVisualStyleBackColor = true;
-            // 
-            // chkActivities
-            // 
-            this.chkActivities.AutoSize = true;
-            this.chkActivities.Depth = 0;
-            this.chkActivities.Location = new System.Drawing.Point(437, 338);
-            this.chkActivities.Margin = new System.Windows.Forms.Padding(0);
-            this.chkActivities.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkActivities.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkActivities.Name = "chkActivities";
-            this.chkActivities.ReadOnly = false;
-            this.chkActivities.Ripple = true;
-            this.chkActivities.Size = new System.Drawing.Size(171, 37);
-            this.chkActivities.TabIndex = 36;
-            this.chkActivities.Text = "Activités physiques";
-            this.chkActivities.UseVisualStyleBackColor = true;
-            // 
-            // chkSleep
-            // 
-            this.chkSleep.AutoSize = true;
-            this.chkSleep.Depth = 0;
-            this.chkSleep.Location = new System.Drawing.Point(437, 407);
-            this.chkSleep.Margin = new System.Windows.Forms.Padding(0);
-            this.chkSleep.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkSleep.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkSleep.Name = "chkSleep";
-            this.chkSleep.ReadOnly = false;
-            this.chkSleep.Ripple = true;
-            this.chkSleep.Size = new System.Drawing.Size(175, 37);
-            this.chkSleep.TabIndex = 37;
-            this.chkSleep.Text = "Gestion de sommeil";
-            this.chkSleep.UseVisualStyleBackColor = true;
+            this.chkPhysHealth.AutoSize = true;
+            this.chkPhysHealth.Depth = 0;
+            this.chkPhysHealth.Location = new System.Drawing.Point(437, 268);
+            this.chkPhysHealth.Margin = new System.Windows.Forms.Padding(0);
+            this.chkPhysHealth.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkPhysHealth.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkPhysHealth.Name = "chkPhysHealth";
+            this.chkPhysHealth.ReadOnly = false;
+            this.chkPhysHealth.Ripple = true;
+            this.chkPhysHealth.Size = new System.Drawing.Size(144, 37);
+            this.chkPhysHealth.TabIndex = 35;
+            this.chkPhysHealth.Text = "Santé physique";
+            this.chkPhysHealth.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -194,14 +160,13 @@
             this.Controls.Add(this.picPinguin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.chkSleep);
-            this.Controls.Add(this.chkActivities);
-            this.Controls.Add(this.chkAlimentation);
+            this.Controls.Add(this.chkPhysHealth);
             this.Controls.Add(this.chkMentalHealth);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pictureBox3);
             this.MaximizeBox = false;
             this.Name = "Interests";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interests";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Interests_FormClosed);
@@ -218,9 +183,7 @@
         #endregion
         private MaterialSkin.Controls.MaterialButton btnNext;
         private MaterialSkin.Controls.MaterialCheckbox chkMentalHealth;
-        private MaterialSkin.Controls.MaterialCheckbox chkAlimentation;
-        private MaterialSkin.Controls.MaterialCheckbox chkActivities;
-        private MaterialSkin.Controls.MaterialCheckbox chkSleep;
+        private MaterialSkin.Controls.MaterialCheckbox chkPhysHealth;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picPinguin;
         private System.Windows.Forms.PictureBox pictureBox2;

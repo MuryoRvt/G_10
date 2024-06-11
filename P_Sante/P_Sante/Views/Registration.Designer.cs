@@ -46,6 +46,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblPassInfo = new System.Windows.Forms.Label();
+            this.comboCountry = new MaterialSkin.Controls.MaterialComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picRepeatPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
@@ -65,7 +67,7 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(716, 428);
+            this.btnSignUp.Location = new System.Drawing.Point(716, 508);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -85,7 +87,7 @@
             this.btnSignIn.Depth = 0;
             this.btnSignIn.HighEmphasis = true;
             this.btnSignIn.Icon = null;
-            this.btnSignIn.Location = new System.Drawing.Point(498, 428);
+            this.btnSignIn.Location = new System.Drawing.Point(498, 508);
             this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
@@ -178,7 +180,7 @@
             this.txtPassword.HideSelection = true;
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(498, 315);
+            this.txtPassword.Location = new System.Drawing.Point(498, 370);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
@@ -224,7 +226,7 @@
             this.txtRepeatPassword.HideSelection = true;
             this.txtRepeatPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtRepeatPassword.LeadingIcon = null;
-            this.txtRepeatPassword.Location = new System.Drawing.Point(498, 370);
+            this.txtRepeatPassword.Location = new System.Drawing.Point(498, 450);
             this.txtRepeatPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtRepeatPassword.Mask = "";
             this.txtRepeatPassword.MaxLength = 32767;
@@ -272,7 +274,7 @@
             // picRepeatPassword
             // 
             this.picRepeatPassword.Image = global::P_Sante.Properties.Resources.multiply;
-            this.picRepeatPassword.Location = new System.Drawing.Point(847, 375);
+            this.picRepeatPassword.Location = new System.Drawing.Point(847, 455);
             this.picRepeatPassword.Name = "picRepeatPassword";
             this.picRepeatPassword.Size = new System.Drawing.Size(36, 34);
             this.picRepeatPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +285,7 @@
             // picPassword
             // 
             this.picPassword.Image = global::P_Sante.Properties.Resources.multiply;
-            this.picPassword.Location = new System.Drawing.Point(847, 319);
+            this.picPassword.Location = new System.Drawing.Point(847, 374);
             this.picPassword.Name = "picPassword";
             this.picPassword.Size = new System.Drawing.Size(36, 34);
             this.picPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -350,7 +352,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::P_Sante.Properties.Resources.Nouage_removebg_preview__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(814, 295);
+            this.pictureBox4.Location = new System.Drawing.Point(814, 350);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(61, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -379,11 +381,48 @@
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
             // 
+            // lblPassInfo
+            // 
+            this.lblPassInfo.AutoSize = true;
+            this.lblPassInfo.Location = new System.Drawing.Point(495, 420);
+            this.lblPassInfo.Name = "lblPassInfo";
+            this.lblPassInfo.Size = new System.Drawing.Size(356, 26);
+            this.lblPassInfo.TabIndex = 45;
+            this.lblPassInfo.Text = "Le mdp doit contenir au moins une lettre, un chiffre et un caractère special\r\n(12" +
+    " caractères au minimum)";
+            // 
+            // comboCountry
+            // 
+            this.comboCountry.AutoResize = false;
+            this.comboCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboCountry.Depth = 0;
+            this.comboCountry.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboCountry.DropDownHeight = 174;
+            this.comboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCountry.DropDownWidth = 121;
+            this.comboCountry.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboCountry.FormattingEnabled = true;
+            this.comboCountry.IntegralHeight = false;
+            this.comboCountry.ItemHeight = 43;
+            this.comboCountry.Items.AddRange(new object[] {
+            "Suisse",
+            "France"});
+            this.comboCountry.Location = new System.Drawing.Point(498, 313);
+            this.comboCountry.MaxDropDownItems = 4;
+            this.comboCountry.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboCountry.Name = "comboCountry";
+            this.comboCountry.Size = new System.Drawing.Size(154, 49);
+            this.comboCountry.StartIndex = 0;
+            this.comboCountry.TabIndex = 46;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 656);
+            this.Controls.Add(this.comboCountry);
+            this.Controls.Add(this.lblPassInfo);
             this.Controls.Add(this.picRepeatPassword);
             this.Controls.Add(this.picPassword);
             this.Controls.Add(this.picEmail);
@@ -405,6 +444,7 @@
             this.ForeColor = System.Drawing.Color.Gray;
             this.MaximizeBox = false;
             this.Name = "Registration";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
@@ -444,5 +484,7 @@
         private System.Windows.Forms.PictureBox picEmail;
         private System.Windows.Forms.PictureBox picPassword;
         private System.Windows.Forms.PictureBox picRepeatPassword;
+        private System.Windows.Forms.Label lblPassInfo;
+        private MaterialSkin.Controls.MaterialComboBox comboCountry;
     }
 }

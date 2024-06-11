@@ -94,8 +94,11 @@
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lblConfirmation);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DialogWindow";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DialogWindow";
             this.ResumeLayout(false);
