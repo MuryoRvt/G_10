@@ -30,13 +30,15 @@ namespace P_Sante.Controllers
 
         private MentalQuestions _aMentalQuestions;
 
-        private PhysiqueQuestions _aPhysiqueQuestions;
+        private PhysicalQuestions _aPhysiqueQuestions;
 
         private Profile _aProfile;
 
         private DialogWindow _aDialog;
 
         private Contact _aContact;
+
+        private State _aState;
         /// <summary>
         /// Model (db manager)
         /// </summary>
@@ -58,7 +60,7 @@ namespace P_Sante.Controllers
         /// <param name="aLogin">Login page</param>
         /// <param name="aRegister">Register page</param>
         /// <param name="aModel">Model</param>
-        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysiqueQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, Contact aContact, Model aModel)
+        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysicalQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, Contact aContact, State aState, Model aModel)
         {
             _aLogin = aLogin;
             _aRegister = aRegister;
@@ -68,6 +70,7 @@ namespace P_Sante.Controllers
             _aProfile = aProfile;
             _aDialog = aDialog;
             _aContact = aContact;
+            _aState = aState;
             _aModel = aModel;
 
             _aLogin.Controller = this;
@@ -78,6 +81,7 @@ namespace P_Sante.Controllers
             _aProfile.Controller = this;
             _aDialog.Controller = this;
             _aContact.Controller = this;
+            _aState.Controller = this;
             _aModel.Controller = this;
         }
 
@@ -106,13 +110,15 @@ namespace P_Sante.Controllers
             _aMentalQuestions.Show();
         } 
 
+        public void HideMentalQuestions() => _aMentalQuestions.Hide();
+
         public void OpenPhysiqueQuestions(MaterialForm form)
         {
             _aPhysiqueQuestions.Location = new Point(form.Location.X, form.Location.Y);
             _aPhysiqueQuestions.Show();
         } 
 
-        public void HidePhysiqueQuestions() => _aPhysiqueQuestions.Hide();
+        public void HidePhysicalQuestions() => _aPhysiqueQuestions.Hide();
 
         public void OpenProfile(MaterialForm form)
         {
@@ -143,6 +149,12 @@ namespace P_Sante.Controllers
         {
             _aContact.Location = new Point(form.Location.X, form.Location.Y);
             _aContact.Show();
+        }
+
+        public void OpenState(MaterialForm form)
+        {
+            _aState.Location = new Point(form.Location.X, form.Location.Y);
+            _aState.Show();
         }
 
         public void UpdateBasicData(string firstName, string lastName, string email, string country, string password)
@@ -198,6 +210,18 @@ namespace P_Sante.Controllers
                     _aModel.CurrentUser = user;
                     _aModel.CurrentUser.MentalScore = MentalScore();
                     _aModel.CurrentUser.PhysicalScore = PhysicalScore();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool EmailExists(string email)
+        {
+            foreach(User u in _aModel.AllUsers)
+            {
+                if(u.Email == email)
+                {
                     return true;
                 }
             }

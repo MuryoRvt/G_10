@@ -26,7 +26,14 @@ namespace P_Sante.Views
             Controller.AddUser();
             Controller.OpenProfile();
             this.Hide();
-            Controller.HidePhysiqueQuestions();
+            if(Controller.CurrentUser().IntPhysicalHealth)
+            {
+                Controller.HidePhysicalQuestions();
+            }
+            else
+            {
+                Controller.HideMentalQuestions();
+            }
         }
 
         private void btnNo_Click(object sender, EventArgs e)

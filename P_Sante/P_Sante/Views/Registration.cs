@@ -37,9 +37,16 @@ namespace P_Sante.Views
         {
             if(Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check, picPassword.Image == check, picRepeatPassword.Image == check))
             {
-                Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, txtPassword.Text);
-                Controller.OpenInterests(this);
-                this.Hide();
+                if(Controller.EmailExists(txtEmail.Text))
+                {
+                    MessageBox.Show("L'utilisateur avec cet email existe déjà");
+                }
+                else
+                {
+                    Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, txtPassword.Text);
+                    Controller.OpenInterests(this);
+                    this.Hide();
+                }
             }
             else
             {

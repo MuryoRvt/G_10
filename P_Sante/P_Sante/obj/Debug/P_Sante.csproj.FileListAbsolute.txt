@@ -26,7 +26,6 @@ D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.pdb
 D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.MentalQuestions.resources
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\MaterialSkin.dll
 D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.csproj.CopyComplete
-D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.PhysiqueQuestions.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\P_Sante.exe.config
 E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\P_Sante.exe
 E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\P_Sante.pdb
@@ -136,3 +135,5 @@ D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.pdb
 D:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\TextBoxForeColor.dll.config
 D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Contact.resources
+D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.PhysicalQuestions.resources
+D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.State.resources

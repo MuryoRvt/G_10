@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace P_Sante.Views
 {
-    public partial class PhysiqueQuestions : MaterialSkin.Controls.MaterialForm
+    public partial class PhysicalQuestions : MaterialSkin.Controls.MaterialForm
     {
 
         public Controllers.Controller Controller { get; set; }
 
-        public PhysiqueQuestions()
+        public PhysicalQuestions()
         {
             InitializeComponent();
         }
@@ -73,6 +73,15 @@ namespace P_Sante.Views
             else
             {
                 MessageBox.Show("Veuillez remplir toutes les cases");
+            }
+        }
+
+        private void PhysiqueQuestions_VisibleChanged(object sender, EventArgs e)
+        {
+            btnPrevious.Visible = true;
+            if(!Controller.CurrentUser().IntMentalHealth)
+            {
+                btnPrevious.Visible = false;
             }
         }
     }

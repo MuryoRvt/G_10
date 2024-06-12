@@ -28,16 +28,22 @@ namespace P_Sante.Views
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Controller.UpdateMentalData(cmbZeroToTen1.Text, rdbYesFriends.Checked, rdbYesAnxiety.Checked, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
-            if(Controller.CurrentUser().IntPhysicalHealth)
+            if((rdbNoAnxiety.Checked || rdbYesAnxiety.Checked) && (rdbNoFriends.Checked || rdbYesFriends.Checked))
             {
-                Controller.OpenPhysiqueQuestions(this);
+                Controller.UpdateMentalData(cmbZeroToTen1.Text, rdbYesFriends.Checked, rdbYesAnxiety.Checked, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
+                if (Controller.CurrentUser().IntPhysicalHealth)
+                {
+                    Controller.OpenPhysiqueQuestions(this);
+                }
+                else
+                {
+                    Controller.OpenDialog(this);
+                }
             }
             else
             {
-                Controller.OpenDialog(this);
+                MessageBox.Show("Veuillez remplir toutes les cases");
             }
-            //this.Hide();
         }
 
         private void MentalQuestions_FormClosed(object sender, FormClosedEventArgs e)

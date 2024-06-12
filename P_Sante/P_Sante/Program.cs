@@ -29,16 +29,17 @@ namespace P_Sante
             Registration aRegister = new Registration();
             Interests aInterests = new Interests();
             MentalQuestions aMentalQuestions = new MentalQuestions();
-            PhysiqueQuestions aPhysiqueQuestions = new PhysiqueQuestions();
+            PhysicalQuestions aPhysiqueQuestions = new PhysicalQuestions();
             Profile aProfile = new Profile();
             DialogWindow aDialog = new DialogWindow();
             Contact aContact = new Contact();
+            State aState = new State();
 
             //model's instance
             Model aModel = new Model();
 
             //controller's instance
-            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysiqueQuestions, aProfile, aDialog, aContact, aModel);
+            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysiqueQuestions, aProfile, aDialog, aContact, aState, aModel);
 
             Application.Run(aLogin);
         }

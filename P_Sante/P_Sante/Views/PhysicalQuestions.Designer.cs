@@ -1,6 +1,6 @@
 ﻿namespace P_Sante.Views
 {
-    partial class PhysiqueQuestions
+    partial class PhysicalQuestions
     {
         /// <summary>
         /// Required designer variable.
@@ -448,19 +448,19 @@
             this.lblHeight.Depth = 0;
             this.lblHeight.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHeight.Location = new System.Drawing.Point(686, 137);
+            this.lblHeight.Location = new System.Drawing.Point(640, 137);
             this.lblHeight.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(113, 19);
+            this.lblHeight.Size = new System.Drawing.Size(159, 19);
             this.lblHeight.TabIndex = 49;
-            this.lblHeight.Text = "Votre taille (cm)";
+            this.lblHeight.Text = "Votre taille (cm, entier)";
             // 
             // txtHeight
             // 
             this.txtHeight.AnimateReadOnly = false;
             this.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHeight.Depth = 0;
-            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtHeight.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtHeight.LeadingIcon = null;
             this.txtHeight.Location = new System.Drawing.Point(805, 119);
             this.txtHeight.MaxLength = 50;
@@ -479,19 +479,19 @@
             this.lblWeight.Depth = 0;
             this.lblWeight.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblWeight.Location = new System.Drawing.Point(686, 200);
+            this.lblWeight.Location = new System.Drawing.Point(640, 200);
             this.lblWeight.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(113, 19);
+            this.lblWeight.Size = new System.Drawing.Size(159, 19);
             this.lblWeight.TabIndex = 51;
-            this.lblWeight.Text = "Votre poids (kg)";
+            this.lblWeight.Text = "Votre poids (kg, entier)";
             // 
             // txtWeight
             // 
             this.txtWeight.AnimateReadOnly = false;
             this.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtWeight.Depth = 0;
-            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtWeight.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtWeight.LeadingIcon = null;
             this.txtWeight.Location = new System.Drawing.Point(805, 187);
             this.txtWeight.MaxLength = 50;
@@ -503,7 +503,7 @@
             this.txtWeight.Text = "";
             this.txtWeight.TrailingIcon = null;
             // 
-            // PhysiqueQuestions
+            // PhysicalQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -529,11 +529,12 @@
             this.Controls.Add(this.lblQP2);
             this.Controls.Add(this.lblQP1);
             this.MaximizeBox = false;
-            this.Name = "PhysiqueQuestions";
+            this.Name = "PhysicalQuestions";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PhysiqueQuestions";
+            this.Text = "PhysicalQuestions";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PhysiqueQuestions_FormClosed);
+            this.VisibleChanged += new System.EventHandler(this.PhysiqueQuestions_VisibleChanged);
             this.splitQuestions.Panel1.ResumeLayout(false);
             this.splitQuestions.Panel1.PerformLayout();
             this.splitQuestions.Panel2.ResumeLayout(false);

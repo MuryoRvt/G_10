@@ -400,7 +400,7 @@
             this.comboCountry.DropDownHeight = 174;
             this.comboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCountry.DropDownWidth = 121;
-            this.comboCountry.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.comboCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.comboCountry.FormattingEnabled = true;
             this.comboCountry.IntegralHeight = false;
