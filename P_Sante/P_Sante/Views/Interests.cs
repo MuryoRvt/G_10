@@ -48,5 +48,37 @@ namespace P_Sante.Views
             chkMentalHealth.Checked = false;
             chkPhysHealth.Checked = false;
         }
+
+        private void chkMentalHealth_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMentalHealth.Checked)
+                picPinguin.Image = Properties.Resources.giphy_ezgif_com_webp_to_gif_converter;
+            else
+                picPinguin.Image = Properties.Resources.PinwinSad;
+        }
+
+        private void chkPhysHealth_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPhysHealth.Checked)
+                picDuck.Image = Properties.Resources.duck_dancing_duck_unscreen;
+            else
+                picDuck.Image = Properties.Resources.DuckNotDancing;
+        }
+
+        private void picPinguin_Click(object sender, EventArgs e)
+        {
+            if (chkMentalHealth.Checked)
+                chkMentalHealth.Checked = false;
+            else
+                chkMentalHealth.Checked = true;
+        }
+
+        private void picDuck_Click(object sender, EventArgs e)
+        {
+            if (chkPhysHealth.Checked)
+                chkPhysHealth.Checked = false;
+            else
+                chkPhysHealth.Checked = true;
+        }
     }
 }

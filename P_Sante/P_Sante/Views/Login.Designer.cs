@@ -33,9 +33,13 @@
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.txtEmail = new TextBoxForeColor.CustomMaterialTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.picEye = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.picCat = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,13 +152,37 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
+            // picEye
+            // 
+            this.picEye.BackColor = System.Drawing.Color.Transparent;
+            this.picEye.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEye.Image = global::P_Sante.Properties.Resources.noeye;
+            this.picEye.Location = new System.Drawing.Point(758, 388);
+            this.picEye.Name = "picEye";
+            this.picEye.Size = new System.Drawing.Size(48, 47);
+            this.picEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEye.TabIndex = 35;
+            this.picEye.TabStop = false;
+            this.picEye.Click += new System.EventHandler(this.picEye_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::P_Sante.Properties.Resources.PlantPetit;
+            this.pictureBox3.Location = new System.Drawing.Point(681, 286);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
             // picCat
             // 
             this.picCat.BackColor = System.Drawing.Color.Transparent;
-            this.picCat.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen;
-            this.picCat.Location = new System.Drawing.Point(409, 70);
+            this.picCat.Image = global::P_Sante.Properties.Resources.LogoGIF;
+            this.picCat.Location = new System.Drawing.Point(409, 100);
             this.picCat.Name = "picCat";
-            this.picCat.Size = new System.Drawing.Size(344, 294);
+            this.picCat.Size = new System.Drawing.Size(344, 223);
             this.picCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCat.TabIndex = 0;
             this.picCat.TabStop = false;
@@ -186,7 +214,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1160, 673);
+            this.ClientSize = new System.Drawing.Size(1295, 690);
+            this.Controls.Add(this.picEye);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnSignUp);
@@ -205,6 +235,8 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.VisibleChanged += new System.EventHandler(this.Login_VisibleChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.picEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -222,6 +254,8 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picEye;
     }
 }
 

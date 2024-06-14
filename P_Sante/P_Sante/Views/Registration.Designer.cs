@@ -38,6 +38,8 @@
             this.lblDialog_Guide = new System.Windows.Forms.Label();
             this.lblPassInfo = new System.Windows.Forms.Label();
             this.comboCountry = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnModifyPassword = new MaterialSkin.Controls.MaterialButton();
+            this.btnFinishModification = new MaterialSkin.Controls.MaterialButton();
             this.picRepeatPassword = new System.Windows.Forms.PictureBox();
             this.picPassword = new System.Windows.Forms.PictureBox();
             this.picEmail = new System.Windows.Forms.PictureBox();
@@ -48,8 +50,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnModifyPassword = new MaterialSkin.Controls.MaterialButton();
-            this.btnFinishModification = new MaterialSkin.Controls.MaterialButton();
+            this.picEyePass = new System.Windows.Forms.PictureBox();
+            this.picEyeRep = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picRepeatPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
@@ -60,6 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeRep)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSignUp
@@ -267,7 +271,7 @@
             this.lblDialog_Guide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDialog_Guide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDialog_Guide.ForeColor = System.Drawing.Color.Black;
-            this.lblDialog_Guide.Location = new System.Drawing.Point(123, 103);
+            this.lblDialog_Guide.Location = new System.Drawing.Point(146, 69);
             this.lblDialog_Guide.Name = "lblDialog_Guide";
             this.lblDialog_Guide.Size = new System.Drawing.Size(95, 20);
             this.lblDialog_Guide.TabIndex = 36;
@@ -307,6 +311,48 @@
             this.comboCountry.Size = new System.Drawing.Size(154, 49);
             this.comboCountry.StartIndex = 0;
             this.comboCountry.TabIndex = 46;
+            // 
+            // btnModifyPassword
+            // 
+            this.btnModifyPassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModifyPassword.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnModifyPassword.Depth = 0;
+            this.btnModifyPassword.HighEmphasis = true;
+            this.btnModifyPassword.Icon = null;
+            this.btnModifyPassword.Location = new System.Drawing.Point(595, 408);
+            this.btnModifyPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModifyPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModifyPassword.Name = "btnModifyPassword";
+            this.btnModifyPassword.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnModifyPassword.Size = new System.Drawing.Size(144, 36);
+            this.btnModifyPassword.TabIndex = 47;
+            this.btnModifyPassword.Text = "Modifier le mdp";
+            this.btnModifyPassword.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnModifyPassword.UseAccentColor = false;
+            this.btnModifyPassword.UseVisualStyleBackColor = true;
+            this.btnModifyPassword.Visible = false;
+            this.btnModifyPassword.Click += new System.EventHandler(this.btnModifyPassword_Click);
+            // 
+            // btnFinishModification
+            // 
+            this.btnFinishModification.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFinishModification.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnFinishModification.Depth = 0;
+            this.btnFinishModification.HighEmphasis = true;
+            this.btnFinishModification.Icon = null;
+            this.btnFinishModification.Location = new System.Drawing.Point(1005, 585);
+            this.btnFinishModification.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFinishModification.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFinishModification.Name = "btnFinishModification";
+            this.btnFinishModification.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnFinishModification.Size = new System.Drawing.Size(64, 36);
+            this.btnFinishModification.TabIndex = 48;
+            this.btnFinishModification.Text = "Finir";
+            this.btnFinishModification.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnFinishModification.UseAccentColor = false;
+            this.btnFinishModification.UseVisualStyleBackColor = true;
+            this.btnFinishModification.Visible = false;
+            this.btnFinishModification.Click += new System.EventHandler(this.btnFinishModification_Click);
             // 
             // picRepeatPassword
             // 
@@ -366,8 +412,8 @@
             // picGoose
             // 
             this.picGoose.BackColor = System.Drawing.Color.Transparent;
-            this.picGoose.Image = global::P_Sante.Properties.Resources.bongo_cat_unscreen__1__dialog;
-            this.picGoose.Location = new System.Drawing.Point(29, 154);
+            this.picGoose.Image = global::P_Sante.Properties.Resources.de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_2;
+            this.picGoose.Location = new System.Drawing.Point(52, 145);
             this.picGoose.Name = "picGoose";
             this.picGoose.Size = new System.Drawing.Size(177, 143);
             this.picGoose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,7 +424,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::P_Sante.Properties.Resources.DialogCharacter;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 88);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(296, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -418,53 +464,39 @@
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
             // 
-            // btnModifyPassword
+            // picEyePass
             // 
-            this.btnModifyPassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModifyPassword.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnModifyPassword.Depth = 0;
-            this.btnModifyPassword.HighEmphasis = true;
-            this.btnModifyPassword.Icon = null;
-            this.btnModifyPassword.Location = new System.Drawing.Point(595, 408);
-            this.btnModifyPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnModifyPassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModifyPassword.Name = "btnModifyPassword";
-            this.btnModifyPassword.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnModifyPassword.Size = new System.Drawing.Size(144, 36);
-            this.btnModifyPassword.TabIndex = 47;
-            this.btnModifyPassword.Text = "Modifier le mdp";
-            this.btnModifyPassword.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnModifyPassword.UseAccentColor = false;
-            this.btnModifyPassword.UseVisualStyleBackColor = true;
-            this.btnModifyPassword.Visible = false;
-            this.btnModifyPassword.Click += new System.EventHandler(this.btnModifyPassword_Click);
+            this.picEyePass.BackColor = System.Drawing.Color.Transparent;
+            this.picEyePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEyePass.Image = global::P_Sante.Properties.Resources.noeye;
+            this.picEyePass.Location = new System.Drawing.Point(793, 370);
+            this.picEyePass.Name = "picEyePass";
+            this.picEyePass.Size = new System.Drawing.Size(49, 48);
+            this.picEyePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyePass.TabIndex = 49;
+            this.picEyePass.TabStop = false;
+            this.picEyePass.Click += new System.EventHandler(this.picEyePass_Click);
             // 
-            // btnFinishModification
+            // picEyeRep
             // 
-            this.btnFinishModification.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFinishModification.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnFinishModification.Depth = 0;
-            this.btnFinishModification.HighEmphasis = true;
-            this.btnFinishModification.Icon = null;
-            this.btnFinishModification.Location = new System.Drawing.Point(1005, 585);
-            this.btnFinishModification.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnFinishModification.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnFinishModification.Name = "btnFinishModification";
-            this.btnFinishModification.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnFinishModification.Size = new System.Drawing.Size(64, 36);
-            this.btnFinishModification.TabIndex = 48;
-            this.btnFinishModification.Text = "Finir";
-            this.btnFinishModification.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnFinishModification.UseAccentColor = false;
-            this.btnFinishModification.UseVisualStyleBackColor = true;
-            this.btnFinishModification.Visible = false;
-            this.btnFinishModification.Click += new System.EventHandler(this.btnFinishModification_Click);
+            this.picEyeRep.BackColor = System.Drawing.Color.Transparent;
+            this.picEyeRep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEyeRep.Image = global::P_Sante.Properties.Resources.noeye;
+            this.picEyeRep.Location = new System.Drawing.Point(793, 450);
+            this.picEyeRep.Name = "picEyeRep";
+            this.picEyeRep.Size = new System.Drawing.Size(49, 48);
+            this.picEyeRep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyeRep.TabIndex = 50;
+            this.picEyeRep.TabStop = false;
+            this.picEyeRep.Click += new System.EventHandler(this.picEyeRep_Click);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 656);
+            this.Controls.Add(this.picEyeRep);
+            this.Controls.Add(this.picEyePass);
             this.Controls.Add(this.btnFinishModification);
             this.Controls.Add(this.btnModifyPassword);
             this.Controls.Add(this.comboCountry);
@@ -508,6 +540,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeRep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +570,7 @@
         private MaterialSkin.Controls.MaterialComboBox comboCountry;
         private MaterialSkin.Controls.MaterialButton btnModifyPassword;
         private MaterialSkin.Controls.MaterialButton btnFinishModification;
+        private System.Windows.Forms.PictureBox picEyePass;
+        private System.Windows.Forms.PictureBox picEyeRep;
     }
 }

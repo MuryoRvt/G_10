@@ -13,12 +13,17 @@ namespace P_Sante.Views
 {
     public partial class Login : MaterialForm
     {
+        private Image _eye = Properties.Resources.eye;
+
+        private Image _noEye = Properties.Resources.noeye;
 
         public Controllers.Controller Controller { get; set; }
 
         public Login()
         {
             InitializeComponent();
+
+            picEye.Image = _noEye;
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -46,7 +51,9 @@ namespace P_Sante.Views
         {
             if (txtPassword.Text == "Mot de passe")
             {
-                txtPassword.PasswordChar = '•';
+                if (picEye.Image == _noEye)
+                    txtPassword.PasswordChar = '•';
+
                 txtPassword.Text = "";
             }
         }
@@ -96,6 +103,20 @@ namespace P_Sante.Views
             txtEmail.ForeColorCustom = Color.Gray;
             txtPassword.PasswordChar = '\0';
             txtPassword.Text = "Mot de passe";
+        }
+
+        private void picEye_Click(object sender, EventArgs e)
+        {
+            if(picEye.Image == _noEye && txtPassword.Text != "Mot de passe")
+            {
+                picEye.Image = _eye;
+                txtPassword.PasswordChar = '\0';
+            }
+            else if(picEye.Image == _eye && txtPassword.Text != "Mot de passe")
+            {
+                picEye.Image = _noEye;
+                txtPassword.PasswordChar = '•';
+            }
         }
     }
 }

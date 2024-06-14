@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interests));
             this.btnNext = new MaterialSkin.Controls.MaterialButton();
             this.chkMentalHealth = new MaterialSkin.Controls.MaterialCheckbox();
             this.chkPhysHealth = new MaterialSkin.Controls.MaterialCheckbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picDuck = new System.Windows.Forms.PictureBox();
             this.picPinguin = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblInterests = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picDuck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinguin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNext
@@ -68,7 +62,7 @@
             // 
             this.chkMentalHealth.AutoSize = true;
             this.chkMentalHealth.Depth = 0;
-            this.chkMentalHealth.Location = new System.Drawing.Point(437, 162);
+            this.chkMentalHealth.Location = new System.Drawing.Point(215, 491);
             this.chkMentalHealth.Margin = new System.Windows.Forms.Padding(0);
             this.chkMentalHealth.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkMentalHealth.MouseState = MaterialSkin.MouseState.HOVER;
@@ -79,12 +73,13 @@
             this.chkMentalHealth.TabIndex = 34;
             this.chkMentalHealth.Text = "Santé mental";
             this.chkMentalHealth.UseVisualStyleBackColor = true;
+            this.chkMentalHealth.CheckedChanged += new System.EventHandler(this.chkMentalHealth_CheckedChanged);
             // 
             // chkPhysHealth
             // 
             this.chkPhysHealth.AutoSize = true;
             this.chkPhysHealth.Depth = 0;
-            this.chkPhysHealth.Location = new System.Drawing.Point(437, 228);
+            this.chkPhysHealth.Location = new System.Drawing.Point(785, 491);
             this.chkPhysHealth.Margin = new System.Windows.Forms.Padding(0);
             this.chkPhysHealth.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkPhysHealth.MouseState = MaterialSkin.MouseState.HOVER;
@@ -95,75 +90,56 @@
             this.chkPhysHealth.TabIndex = 35;
             this.chkPhysHealth.Text = "Santé physique";
             this.chkPhysHealth.UseVisualStyleBackColor = true;
+            this.chkPhysHealth.CheckedChanged += new System.EventHandler(this.chkPhysHealth_CheckedChanged);
             // 
-            // pictureBox1
+            // picDuck
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::P_Sante.Properties.Resources.duck_dancing_duck_unscreen;
-            this.pictureBox1.Location = new System.Drawing.Point(916, 140);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
+            this.picDuck.BackColor = System.Drawing.Color.Transparent;
+            this.picDuck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDuck.Image = global::P_Sante.Properties.Resources.DuckNotDancing;
+            this.picDuck.Location = new System.Drawing.Point(672, 116);
+            this.picDuck.Name = "picDuck";
+            this.picDuck.Size = new System.Drawing.Size(343, 372);
+            this.picDuck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDuck.TabIndex = 48;
+            this.picDuck.TabStop = false;
+            this.picDuck.Click += new System.EventHandler(this.picDuck_Click);
             // 
             // picPinguin
             // 
-            this.picPinguin.BackColor = System.Drawing.Color.White;
-            this.picPinguin.Image = global::P_Sante.Properties.Resources.giphy_ezgif_com_webp_to_gif_converter;
-            this.picPinguin.Location = new System.Drawing.Point(108, 116);
+            this.picPinguin.BackColor = System.Drawing.Color.Transparent;
+            this.picPinguin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPinguin.Image = global::P_Sante.Properties.Resources.PinwinSad;
+            this.picPinguin.Location = new System.Drawing.Point(130, 116);
             this.picPinguin.Name = "picPinguin";
-            this.picPinguin.Size = new System.Drawing.Size(136, 147);
-            this.picPinguin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPinguin.Size = new System.Drawing.Size(309, 372);
+            this.picPinguin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPinguin.TabIndex = 46;
             this.picPinguin.TabStop = false;
+            this.picPinguin.Click += new System.EventHandler(this.picPinguin_Click);
             // 
-            // pictureBox2
+            // lblInterests
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::P_Sante.Properties.Resources.cercle_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 67);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(276, 250);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::P_Sante.Properties.Resources.Penta;
-            this.pictureBox4.Location = new System.Drawing.Point(853, 67);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(284, 248);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 49;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(117, 321);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(929, 305);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
+            this.lblInterests.AutoSize = true;
+            this.lblInterests.BackColor = System.Drawing.Color.Transparent;
+            this.lblInterests.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblInterests.Location = new System.Drawing.Point(418, 51);
+            this.lblInterests.Name = "lblInterests";
+            this.lblInterests.Size = new System.Drawing.Size(327, 29);
+            this.lblInterests.TabIndex = 49;
+            this.lblInterests.Text = "Qu\'est-ce qui vous interesse?";
             // 
             // Interests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 656);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblInterests);
+            this.Controls.Add(this.picDuck);
             this.Controls.Add(this.picPinguin);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.chkPhysHealth);
             this.Controls.Add(this.chkMentalHealth);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.pictureBox3);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.MaximizeBox = false;
             this.Name = "Interests";
@@ -173,11 +149,8 @@
             this.Text = "Interests";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Interests_FormClosed);
             this.VisibleChanged += new System.EventHandler(this.Interests_VisibleChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDuck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinguin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,10 +160,8 @@
         private MaterialSkin.Controls.MaterialButton btnNext;
         private MaterialSkin.Controls.MaterialCheckbox chkMentalHealth;
         private MaterialSkin.Controls.MaterialCheckbox chkPhysHealth;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picDuck;
         private System.Windows.Forms.PictureBox picPinguin;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblInterests;
     }
 }

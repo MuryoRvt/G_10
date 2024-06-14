@@ -328,5 +328,44 @@
   <ItemGroup>
     <None Include="Resources\HappyFace8Bits.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoGIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriZenLOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantPetit-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantPetit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClosedEye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noeye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DuckNotDancing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plant2Grande.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

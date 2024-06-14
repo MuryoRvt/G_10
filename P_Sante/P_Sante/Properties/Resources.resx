@@ -124,6 +124,9 @@
   <data name="duck-dancing-duck-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duck-dancing-duck-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Termo8BitsAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Termo8BitsAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="duck_dancingd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duck-dancingd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="multiply" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\multiply.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sadface8Bit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sadface8Bit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bongo-cat-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bongo-cat-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +166,12 @@
   <data name="Penta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Penta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PinwinSad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinwinSad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PaysageInteret" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PaysageInteret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,6 +184,9 @@
   <data name="Duck_Surprise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck_Surprise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clouds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="clappingcat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clappingcat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,28 +196,49 @@
   <data name="pngwing_com__3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com (3) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PlantPetit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlantPetit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clouds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HappyFace8Bits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HappyFace8Bits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoGIF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoGIF.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DialogCharacter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DialogCharacter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PinwinSad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PinwinSad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="multiply" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TriZenLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriZenLOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sadface8Bit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sadface8Bit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bongo_cat_unscreen__1__dialog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bongo-cat-unscreen (1) dialog.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HappyFace8Bits" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HappyFace8Bits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="noeye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noeye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DuckNotDancing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DuckNotDancing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plant2Grande" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plant2Grande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

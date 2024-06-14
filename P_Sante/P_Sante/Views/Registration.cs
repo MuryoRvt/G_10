@@ -13,6 +13,9 @@ namespace P_Sante.Views
 {
     public partial class Registration : MaterialSkin.Controls.MaterialForm
     {
+        private Image _eye = Properties.Resources.eye;
+
+        private Image _noEye = Properties.Resources.noeye;
         /// <summary>
         /// Controller to manage the views
         /// </summary>
@@ -29,6 +32,9 @@ namespace P_Sante.Views
         public Registration()
         {
             InitializeComponent();
+
+            picEyePass.Image = _noEye;
+            picEyeRep.Image = _noEye;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -91,16 +97,22 @@ namespace P_Sante.Views
         {
             if (txtPassword.Text == "Mot de passe")
             {
+                if (picEyePass.Image == _noEye)
+                    txtPassword.PasswordChar = '•';
+
                 txtPassword.Text = "";
-                txtPassword.PasswordChar = '•';
+                picPassword.Visible = true;
             }
         }
         private void txtRepeatPassword_Enter(object sender, EventArgs e)
         {
             if (txtRepeatPassword.Text == "Répétez le mdp")
             {
+                if (picEyeRep.Image == _noEye)
+                    txtRepeatPassword.PasswordChar = '•';
+
                 txtRepeatPassword.Text = "";
-                txtRepeatPassword.PasswordChar = '•';
+                picRepeatPassword.Visible = true;
             }
         }
 
@@ -192,7 +204,9 @@ namespace P_Sante.Views
                 picPassword.Visible = false;
                 picRepeatPassword.Visible = false;
                 txtPassword.Visible = false;
+                picEyePass.Visible = false;
                 txtRepeatPassword.Visible = false;
+                picEyeRep.Visible = false;
                 lblPassInfo.Visible = false;
                 btnSignIn.Visible = false;
                 btnSignUp.Visible = false;
@@ -223,7 +237,9 @@ namespace P_Sante.Views
                 picPassword.Visible = false;
                 picRepeatPassword.Visible = false;
                 txtPassword.Visible = true;
+                picEyePass.Visible = true;
                 txtRepeatPassword.Visible = true;
+                picEyeRep.Visible = true;
                 lblPassInfo.Visible = true;
                 btnSignIn.Visible = true;
                 btnSignUp.Visible = true;
@@ -286,10 +302,6 @@ namespace P_Sante.Views
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassword.PasswordChar == '\0')
-            {
-                picPassword.Visible = true;
-            }
             if (Controller.PasswordCheck(txtPassword.Text))
             {
                 picPassword.Image = _check;
@@ -302,10 +314,6 @@ namespace P_Sante.Views
 
         private void txtRepeatPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtRepeatPassword.PasswordChar == '\0')
-            {
-                picRepeatPassword.Visible = true;
-            }
             if (Controller.PasswordCheck(txtRepeatPassword.Text) && txtRepeatPassword.Text == txtPassword.Text)
             {
                 picRepeatPassword.Image = _check;
@@ -347,6 +355,34 @@ namespace P_Sante.Views
         private void btnModifyPassword_Click(object sender, EventArgs e)
         {
             Controller.OpenModify(this);
+        }
+
+        private void picEyePass_Click(object sender, EventArgs e)
+        {
+            if (picEyePass.Image == _noEye && txtPassword.Text != "Mot de passe")
+            {
+                picEyePass.Image = _eye;
+                txtPassword.PasswordChar = '\0';
+            }
+            else if (picEyePass.Image == _eye && txtPassword.Text != "Mot de passe")
+            {
+                picEyePass.Image = _noEye;
+                txtPassword.PasswordChar = '•';
+            }
+        }
+
+        private void picEyeRep_Click(object sender, EventArgs e)
+        {
+            if (picEyeRep.Image == _noEye && txtRepeatPassword.Text != "Répétez le mdp")
+            {
+                picEyeRep.Image = _eye;
+                txtRepeatPassword.PasswordChar = '\0';
+            }
+            else if (picEyeRep.Image == _eye && txtRepeatPassword.Text != "Répétez le mdp")
+            {
+                picEyeRep.Image = _noEye;
+                txtRepeatPassword.PasswordChar = '•';
+            }
         }
     }
 }

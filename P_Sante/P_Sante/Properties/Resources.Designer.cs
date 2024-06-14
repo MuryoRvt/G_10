@@ -123,9 +123,49 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_0 {
+            get {
+                object obj = ResourceManager.GetObject("de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_1 {
+            get {
+                object obj = ResourceManager.GetObject("de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_2 {
+            get {
+                object obj = ResourceManager.GetObject("de519f3103ac491387bac1edb92156d3CSbkFhvbe4LBcvd1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DialogCharacter {
             get {
                 object obj = ResourceManager.GetObject("DialogCharacter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DialogLeft {
+            get {
+                object obj = ResourceManager.GetObject("DialogLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +223,26 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DuckNotDancing {
+            get {
+                object obj = ResourceManager.GetObject("DuckNotDancing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye {
+            get {
+                object obj = ResourceManager.GetObject("eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap giphy_ezgif_com_webp_to_gif_converter {
             get {
                 object obj = ResourceManager.GetObject("giphy-ezgif.com-webp-to-gif-converter", resourceCulture);
@@ -213,6 +273,16 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoGIF {
+            get {
+                object obj = ResourceManager.GetObject("LogoGIF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mer {
             get {
                 object obj = ResourceManager.GetObject("mer", resourceCulture);
@@ -236,6 +306,16 @@ namespace P_Sante.Properties {
         internal static System.Drawing.Bitmap Mushh {
             get {
                 object obj = ResourceManager.GetObject("Mushh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noeye {
+            get {
+                object obj = ResourceManager.GetObject("noeye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +383,26 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Plant2Grande {
+            get {
+                object obj = ResourceManager.GetObject("Plant2Grande", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlantPetit {
+            get {
+                object obj = ResourceManager.GetObject("PlantPetit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngwing_com__3___1_ {
             get {
                 object obj = ResourceManager.GetObject("pngwing_com__3___1_", resourceCulture);
@@ -356,6 +456,16 @@ namespace P_Sante.Properties {
         internal static System.Drawing.Bitmap Termo8BitsAzul {
             get {
                 object obj = ResourceManager.GetObject("Termo8BitsAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TriZenLOGO {
+            get {
+                object obj = ResourceManager.GetObject("TriZenLOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,6 +12,9 @@ namespace P_Sante.Views
 {
     public partial class MentalQuestions : MaterialSkin.Controls.MaterialForm
     {
+        private Image sadPin = Properties.Resources.PinwinSad;
+
+        private Image happyPin = Properties.Resources.pinwinHappy;
 
         public Controllers.Controller Controller { get; set; }
 
@@ -36,6 +39,7 @@ namespace P_Sante.Views
                 if (Controller.CurrentUser().IntPhysicalHealth)
                 {
                     Controller.OpenPhysicalQuestions(this);
+                    this.Hide();
                 }
                 else
                 {
@@ -55,7 +59,10 @@ namespace P_Sante.Views
 
         private void MentalQuestions_VisibleChanged(object sender, EventArgs e)
         {
-            if(Modify)
+            picPin.Visible = false;
+            picDialog.Visible = false;
+            lblDialog.Visible = false;
+            if (Modify)
             {
                 rdbYesFriends.Checked = Controller.CurrentUser().Friends;
                 rdbNoFriends.Checked = !Controller.CurrentUser().Friends;
@@ -105,6 +112,66 @@ namespace P_Sante.Views
             }
             btnNext.Click += btnNext_Click;
             btnNext.Click -= Finish_Click;
+        }
+
+        private void cmbZeroToTen1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            picPin.Visible = true;
+            picPin.Location = new Point(705, 150);
+            picDialog.Visible = true;
+            picDialog.Location = new Point(682, 95);
+            lblDialog.Visible = true;
+            lblDialog.Location = new Point(692, 106);
+            if (cmbZeroToTen1.SelectedIndex < 6)
+            {
+                picPin.Image = sadPin;
+                lblDialog.Text = "triste";
+            }
+            else
+            {
+                picPin.Image = happyPin;
+                lblDialog.Text = "pas triste";
+            }  
+        }
+
+        private void rdbFriends_CheckedChanged(object sender, EventArgs e)
+        {
+            picPin.Visible = true;
+            picPin.Location = new Point(817, 214);
+            picDialog.Visible = true;
+            picDialog.Location = new Point(794, 159);
+            lblDialog.Visible = true;
+            lblDialog.Location = new Point(804, 170);
+            if (!rdbYesFriends.Checked)
+            {
+                picPin.Image = sadPin;
+                lblDialog.Text = "triste";
+            }
+            else
+            {
+                picPin.Image = happyPin;
+                lblDialog.Text = "pas triste";
+            }    
+        }
+
+        private void rdbAnxiety_CheckedChanged(object sender, EventArgs e)
+        {
+            picPin.Visible = true;
+            picPin.Location = new Point(817, 307);
+            picDialog.Visible = true;
+            picDialog.Location = new Point(794, 252);
+            lblDialog.Visible = true;
+            lblDialog.Location = new Point(804, 263);
+            if (rdbYesAnxiety.Checked)
+            {
+                picPin.Image = sadPin;
+                lblDialog.Text = "triste";
+            }
+            else
+            {
+                picPin.Image = happyPin;
+                lblDialog.Text = "pas triste";
+            }
         }
     }
 }
