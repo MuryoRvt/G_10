@@ -22,6 +22,10 @@ namespace P_Sante.Views
 
         private Image nonCheck = Properties.Resources.multiply;
 
+        public bool Modify { get; set; } = false;
+
+        private string _tempPass = "";
+
         public Registration()
         {
             InitializeComponent();
@@ -43,7 +47,7 @@ namespace P_Sante.Views
                 }
                 else
                 {
-                    Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, txtPassword.Text);
+                    Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, Controller.HashPassword(txtPassword.Text));
                     Controller.OpenInterests(this);
                     this.Hide();
                 }
@@ -170,21 +174,64 @@ namespace P_Sante.Views
 
         private void Registration_VisibleChanged(object sender, EventArgs e)
         {
-            txtFirstName.Text = "Prénom";
-            txtFirstName.ForeColorCustom = Color.Gray;
-            txtLastName.Text = "Nom";
-            txtLastName.ForeColorCustom = Color.Gray;
-            txtEmail.Text = "E-mail";
-            txtEmail.ForeColorCustom = Color.Gray;
-            txtPassword.PasswordChar = '\0';
-            txtPassword.Text = "Mot de passe";
-            txtRepeatPassword.PasswordChar = '\0';
-            txtRepeatPassword.Text = "Répétez le mdp";
-            picFirstName.Visible = false;
-            picLastName.Visible = false;
-            picEmail.Visible = false;
-            picPassword.Visible = false;
-            picRepeatPassword.Visible = false;
+            if(Modify)
+            {
+                txtFirstName.Text = Controller.CurrentUser().FirstName;
+                txtFirstName.ForeColorCustom = Color.Black;
+                txtLastName.Text = Controller.CurrentUser().LastName;
+                txtLastName.ForeColorCustom = Color.Black;
+                txtEmail.Text = Controller.CurrentUser().Email;
+                txtEmail.ForeColorCustom = Color.Black;
+                txtPassword.PasswordChar = '\0';
+                txtPassword.Text = "Mot de passe";
+                txtRepeatPassword.PasswordChar = '\0';
+                txtRepeatPassword.Text = "Répétez le mdp";
+                picFirstName.Visible = true;
+                picLastName.Visible = true;
+                picEmail.Visible = true;
+                picPassword.Visible = false;
+                picRepeatPassword.Visible = false;
+                txtPassword.Visible = false;
+                txtRepeatPassword.Visible = false;
+                lblPassInfo.Visible = false;
+                btnSignIn.Visible = false;
+                btnSignUp.Visible = false;
+                lblDialog_Guide.Text = "Modification";
+
+                btnModifyPassword.Visible = true;
+                btnFinishModification.Visible = true;
+
+                _tempPass = Controller.CurrentUser().Password;
+
+                Modify = false;
+            }
+            else
+            {
+                txtFirstName.Text = "Prénom";
+                txtFirstName.ForeColorCustom = Color.Gray;
+                txtLastName.Text = "Nom";
+                txtLastName.ForeColorCustom = Color.Gray;
+                txtEmail.Text = "E-mail";
+                txtEmail.ForeColorCustom = Color.Gray;
+                txtPassword.PasswordChar = '\0';
+                txtPassword.Text = "Mot de passe";
+                txtRepeatPassword.PasswordChar = '\0';
+                txtRepeatPassword.Text = "Répétez le mdp";
+                picFirstName.Visible = false;
+                picLastName.Visible = false;
+                picEmail.Visible = false;
+                picPassword.Visible = false;
+                picRepeatPassword.Visible = false;
+                txtPassword.Visible = true;
+                txtRepeatPassword.Visible = true;
+                lblPassInfo.Visible = true;
+                btnSignIn.Visible = true;
+                btnSignUp.Visible = true;
+                lblDialog_Guide.Text = "Registration";
+
+                btnModifyPassword.Visible = false;
+                btnFinishModification.Visible = false;
+            }
         }
 
         private void txt_TextChanged(object sender, EventArgs e)
@@ -266,6 +313,31 @@ namespace P_Sante.Views
             else
             {
                 picRepeatPassword.Image = nonCheck;
+            }
+        }
+
+        private void btnFinishModification_Click(object sender, EventArgs e)
+        {
+            if (Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check))
+            {
+                if (Controller.EmailExists(txtEmail.Text))
+                {
+                    MessageBox.Show("L'utilisateur avec cet email existe déjà");
+                }
+                else
+                {
+                    Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, _tempPass);
+                    Controller.UpdateUser();
+
+                    _tempPass = "";
+
+                    Controller.OpenProfile(this);
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("NON");
             }
         }
     }

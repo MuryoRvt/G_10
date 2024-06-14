@@ -51,7 +51,7 @@
             this.btnNext.Depth = 0;
             this.btnNext.HighEmphasis = true;
             this.btnNext.Icon = null;
-            this.btnNext.Location = new System.Drawing.Point(977, 564);
+            this.btnNext.Location = new System.Drawing.Point(992, 571);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNext.Name = "btnNext";
@@ -68,7 +68,7 @@
             // 
             this.chkMentalHealth.AutoSize = true;
             this.chkMentalHealth.Depth = 0;
-            this.chkMentalHealth.Location = new System.Drawing.Point(437, 202);
+            this.chkMentalHealth.Location = new System.Drawing.Point(437, 162);
             this.chkMentalHealth.Margin = new System.Windows.Forms.Padding(0);
             this.chkMentalHealth.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkMentalHealth.MouseState = MaterialSkin.MouseState.HOVER;
@@ -84,7 +84,7 @@
             // 
             this.chkPhysHealth.AutoSize = true;
             this.chkPhysHealth.Depth = 0;
-            this.chkPhysHealth.Location = new System.Drawing.Point(437, 268);
+            this.chkPhysHealth.Location = new System.Drawing.Point(437, 228);
             this.chkPhysHealth.Margin = new System.Windows.Forms.Padding(0);
             this.chkPhysHealth.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkPhysHealth.MouseState = MaterialSkin.MouseState.HOVER;
@@ -164,8 +164,10 @@
             this.Controls.Add(this.chkMentalHealth);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pictureBox3);
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.MaximizeBox = false;
             this.Name = "Interests";
+            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interests";

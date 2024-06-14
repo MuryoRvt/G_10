@@ -26,7 +26,7 @@ namespace P_Sante.Models
             AllUsers = new List<User>();
         }
 
-        public void InsertIntoDB(User currentUser)
+        public void InsertIntoDB()
         {
             string connStr = "server=localhost;user=root;database=db_health;port=3306;password=root";
             using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -40,30 +40,30 @@ namespace P_Sante.Models
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
-                        cmd.Parameters.AddWithValue("@FirstName", currentUser.FirstName);
-                        cmd.Parameters.AddWithValue("@LastName", currentUser.LastName);
-                        cmd.Parameters.AddWithValue("@Email", currentUser.Email);
-                        cmd.Parameters.AddWithValue("@Country", currentUser.Country);
-                        cmd.Parameters.AddWithValue("@Password", currentUser.Password);
-                        cmd.Parameters.AddWithValue("@IntMentalHealth", currentUser.IntMentalHealth);
-                        cmd.Parameters.AddWithValue("@IntPhysicalHealth", currentUser.IntPhysicalHealth);
-                        cmd.Parameters.AddWithValue("@State", currentUser.State);
-                        cmd.Parameters.AddWithValue("@Friends", currentUser.Friends);
-                        cmd.Parameters.AddWithValue("@Anxiety", currentUser.Anxiety);
-                        cmd.Parameters.AddWithValue("@EaseToRelate", currentUser.EaseToRelate);
-                        cmd.Parameters.AddWithValue("@Favourites1", currentUser.Favourites1);
-                        cmd.Parameters.AddWithValue("@Favourites2", currentUser.Favourites2);
-                        cmd.Parameters.AddWithValue("@Favourites3", currentUser.Favourites3);
-                        cmd.Parameters.AddWithValue("@Sleep", currentUser.Sleep);
-                        cmd.Parameters.AddWithValue("@Exercises", currentUser.Exercises);
-                        cmd.Parameters.AddWithValue("@Water", currentUser.Water);
-                        cmd.Parameters.AddWithValue("@FoodQuality", currentUser.FoodQuality);
-                        cmd.Parameters.AddWithValue("@Medicines", currentUser.Medicines);
-                        cmd.Parameters.AddWithValue("@Medicines1", currentUser.Medicines1);
-                        cmd.Parameters.AddWithValue("@Medicines2", currentUser.Medicines2);
-                        cmd.Parameters.AddWithValue("@Medicines3", currentUser.Medicines3);
-                        cmd.Parameters.AddWithValue("@Height", currentUser.Height);
-                        cmd.Parameters.AddWithValue("@Weight", currentUser.Weight);
+                        cmd.Parameters.AddWithValue("@FirstName", CurrentUser.FirstName);
+                        cmd.Parameters.AddWithValue("@LastName", CurrentUser.LastName);
+                        cmd.Parameters.AddWithValue("@Email", CurrentUser.Email);
+                        cmd.Parameters.AddWithValue("@Country", CurrentUser.Country);
+                        cmd.Parameters.AddWithValue("@Password", CurrentUser.Password);
+                        cmd.Parameters.AddWithValue("@IntMentalHealth", CurrentUser.IntMentalHealth);
+                        cmd.Parameters.AddWithValue("@IntPhysicalHealth", CurrentUser.IntPhysicalHealth);
+                        cmd.Parameters.AddWithValue("@State", CurrentUser.State);
+                        cmd.Parameters.AddWithValue("@Friends", CurrentUser.Friends);
+                        cmd.Parameters.AddWithValue("@Anxiety", CurrentUser.Anxiety);
+                        cmd.Parameters.AddWithValue("@EaseToRelate", CurrentUser.EaseToRelate);
+                        cmd.Parameters.AddWithValue("@Favourites1", CurrentUser.Favourites1);
+                        cmd.Parameters.AddWithValue("@Favourites2", CurrentUser.Favourites2);
+                        cmd.Parameters.AddWithValue("@Favourites3", CurrentUser.Favourites3);
+                        cmd.Parameters.AddWithValue("@Sleep", CurrentUser.Sleep);
+                        cmd.Parameters.AddWithValue("@Exercises", CurrentUser.Exercises);
+                        cmd.Parameters.AddWithValue("@Water", CurrentUser.Water);
+                        cmd.Parameters.AddWithValue("@FoodQuality", CurrentUser.FoodQuality);
+                        cmd.Parameters.AddWithValue("@Medicines", CurrentUser.Medicines);
+                        cmd.Parameters.AddWithValue("@Medicines1", CurrentUser.Medicines1);
+                        cmd.Parameters.AddWithValue("@Medicines2", CurrentUser.Medicines2);
+                        cmd.Parameters.AddWithValue("@Medicines3", CurrentUser.Medicines3);
+                        cmd.Parameters.AddWithValue("@Height", CurrentUser.Height);
+                        cmd.Parameters.AddWithValue("@Weight", CurrentUser.Weight);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -86,7 +86,7 @@ namespace P_Sante.Models
                 try
                 {
                     conn.Open();
-                    string sql = "SELECT useFirstName, useLastName, useEmail, useCountry, usePassword, useIntMentalHealth, useIntPhysicalHealth, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3, useHeight, useWeight FROM t_user";
+                    string sql = "SELECT idUser, useFirstName, useLastName, useEmail, useCountry, usePassword, useIntMentalHealth, useIntPhysicalHealth, useState, useFriends, useAnxiety, useEaseToRelate, useFavourites1, useFavourites2, useFavourites3, useSleep, useExercises, useWater, useFoodQuality, useMedicines, useMedicines1, useMedicines2, useMedicines3, useHeight, useWeight FROM t_user";
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
@@ -96,6 +96,7 @@ namespace P_Sante.Models
                             {
                                 User user = new User
                                 {
+                                    Id = Convert.ToInt32(rdr["idUser"]),
                                     FirstName = rdr["useFirstName"].ToString(),
                                     LastName = rdr["useLastName"].ToString(),
                                     Email = rdr["useEmail"].ToString(),
@@ -133,6 +134,78 @@ namespace P_Sante.Models
                 }
             }
             return users;
+        }
+
+        public void UpdateData()
+        {
+            string connStr = "server=localhost;user=root;database=db_health;port=3306;password=root";
+
+            using (MySqlConnection connection = new MySqlConnection(connStr))
+            {
+                connection.Open();
+
+                string updateQuery = @"
+                UPDATE t_user
+                SET
+                    useFirstName = @FirstName,
+                    useLastName = @LastName,
+                    useEmail = @Email,
+                    useCountry = @Country,
+                    usePassword = @Password,
+                    useIntMentalHealth = @IntMentalHealth,
+                    useIntPhysicalHealth = @IntPhysicalHealth,
+                    useState = @State,
+                    useFriends = @Friends,
+                    useAnxiety = @Anxiety,
+                    useEaseToRelate = @EaseToRelate,
+                    useFavourites1 = @Favourites1,
+                    useFavourites2 = @Favourites2,
+                    useFavourites3 = @Favourites3,
+                    useSleep = @Sleep,
+                    useExercises = @Exercises,
+                    useWater = @Water,
+                    useFoodQuality = @FoodQuality,
+                    useMedicines = @Medicines,
+                    useMedicines1 = @Medicines1,
+                    useMedicines2 = @Medicines2,
+                    useMedicines3 = @Medicines3,
+                    useHeight = @Height,
+                    useWeight = @Weight
+                WHERE
+                    idUser = @IdToUpdate";
+
+                using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@FirstName", CurrentUser.FirstName);
+                    command.Parameters.AddWithValue("@LastName", CurrentUser.LastName);
+                    command.Parameters.AddWithValue("@Email", CurrentUser.Email);
+                    command.Parameters.AddWithValue("@Country", CurrentUser.Country);
+                    command.Parameters.AddWithValue("@Password", CurrentUser.Password);
+                    command.Parameters.AddWithValue("@IntMentalHealth", CurrentUser.IntMentalHealth);
+                    command.Parameters.AddWithValue("@IntPhysicalHealth", CurrentUser.IntPhysicalHealth);
+                    command.Parameters.AddWithValue("@State", CurrentUser.State);
+                    command.Parameters.AddWithValue("@Friends", CurrentUser.Friends);
+                    command.Parameters.AddWithValue("@Anxiety", CurrentUser.Anxiety);
+                    command.Parameters.AddWithValue("@EaseToRelate", CurrentUser.EaseToRelate);
+                    command.Parameters.AddWithValue("@Favourites1", CurrentUser.Favourites1);
+                    command.Parameters.AddWithValue("@Favourites2", CurrentUser.Favourites2);
+                    command.Parameters.AddWithValue("@Favourites3", CurrentUser.Favourites3);
+                    command.Parameters.AddWithValue("@Sleep", CurrentUser.Sleep);
+                    command.Parameters.AddWithValue("@Exercises", CurrentUser.Exercises);
+                    command.Parameters.AddWithValue("@Water", CurrentUser.Water);
+                    command.Parameters.AddWithValue("@FoodQuality", CurrentUser.FoodQuality);
+                    command.Parameters.AddWithValue("@Medicines", CurrentUser.Medicines);
+                    command.Parameters.AddWithValue("@Medicines1", CurrentUser.Medicines1);
+                    command.Parameters.AddWithValue("@Medicines2", CurrentUser.Medicines2);
+                    command.Parameters.AddWithValue("@Medicines3", CurrentUser.Medicines3);
+                    command.Parameters.AddWithValue("@Height", CurrentUser.Height);
+                    command.Parameters.AddWithValue("@Weight", CurrentUser.Weight);
+                    command.Parameters.AddWithValue("@IdToUpdate", CurrentUser.Id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    Console.WriteLine($"{rowsAffected} row(s) updated.");
+                }
+            }
         }
     }
 }

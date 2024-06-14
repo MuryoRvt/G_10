@@ -33,7 +33,7 @@ namespace P_Sante.Views
                 Controller.UpdateMentalData(cmbZeroToTen1.Text, rdbYesFriends.Checked, rdbYesAnxiety.Checked, cmbZeroToTen2.Text, txtFavourites1.Text, txtFavourites2.Text, txtFavourites3.Text);
                 if (Controller.CurrentUser().IntPhysicalHealth)
                 {
-                    Controller.OpenPhysiqueQuestions(this);
+                    Controller.OpenPhysicalQuestions(this);
                 }
                 else
                 {

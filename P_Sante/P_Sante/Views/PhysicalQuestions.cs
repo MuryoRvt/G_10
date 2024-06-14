@@ -15,6 +15,8 @@ namespace P_Sante.Views
 
         public Controllers.Controller Controller { get; set; }
 
+        public bool Modify { get; set; } = false;
+
         public PhysicalQuestions()
         {
             InitializeComponent();
@@ -76,12 +78,25 @@ namespace P_Sante.Views
             }
         }
 
-        private void PhysiqueQuestions_VisibleChanged(object sender, EventArgs e)
+        private void PhysicalQuestions_VisibleChanged(object sender, EventArgs e)
         {
             btnPrevious.Visible = true;
-            if(!Controller.CurrentUser().IntMentalHealth)
+            if(!Controller.CurrentUser().IntMentalHealth || Modify)
             {
                 btnPrevious.Visible = false;
+            }
+            if(Modify)
+            {
+                rdbYesSleep.Checked = Controller.CurrentUser().Sleep;
+                rdbNoSleep.Checked = !Controller.CurrentUser().Sleep;
+                rdbYesExercises.Checked = Controller.CurrentUser().Exercises;
+                rdbNoExercises.Checked = !Controller.CurrentUser().Exercises;
+                rdbYesWater.Checked = Controller.CurrentUser().Water;
+                rdbNoWater.Checked = !Controller.CurrentUser().Water;
+                rdbYesMedicines.Checked = Controller.CurrentUser().Medicines;
+                rdbNoMedecines.Checked = !Controller.CurrentUser().Medicines;
+
+                Modify = false;
             }
         }
     }

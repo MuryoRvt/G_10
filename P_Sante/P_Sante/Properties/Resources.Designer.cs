@@ -203,6 +203,16 @@ namespace P_Sante.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HappyFace8Bits {
+            get {
+                object obj = ResourceManager.GetObject("HappyFace8Bits", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mer {
             get {
                 object obj = ResourceManager.GetObject("mer", resourceCulture);
@@ -316,6 +326,16 @@ namespace P_Sante.Properties {
         internal static System.Drawing.Bitmap rpgscene_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("rpgscene_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sadface8Bit {
+            get {
+                object obj = ResourceManager.GetObject("sadface8Bit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

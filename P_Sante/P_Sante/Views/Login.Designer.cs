@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnSignIn = new MaterialSkin.Controls.MaterialButton();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.txtEmail = new TextBoxForeColor.CustomMaterialTextBox();
@@ -194,8 +195,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.Gray;
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

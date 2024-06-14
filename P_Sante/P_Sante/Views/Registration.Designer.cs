@@ -36,6 +36,8 @@
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtRepeatPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.lblDialog_Guide = new System.Windows.Forms.Label();
+            this.lblPassInfo = new System.Windows.Forms.Label();
+            this.comboCountry = new MaterialSkin.Controls.MaterialComboBox();
             this.picRepeatPassword = new System.Windows.Forms.PictureBox();
             this.picPassword = new System.Windows.Forms.PictureBox();
             this.picEmail = new System.Windows.Forms.PictureBox();
@@ -46,8 +48,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblPassInfo = new System.Windows.Forms.Label();
-            this.comboCountry = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnModifyPassword = new MaterialSkin.Controls.MaterialButton();
+            this.btnFinishModification = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.picRepeatPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
@@ -67,7 +69,7 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(716, 508);
+            this.btnSignUp.Location = new System.Drawing.Point(716, 506);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -87,7 +89,7 @@
             this.btnSignIn.Depth = 0;
             this.btnSignIn.HighEmphasis = true;
             this.btnSignIn.Icon = null;
-            this.btnSignIn.Location = new System.Drawing.Point(498, 508);
+            this.btnSignIn.Location = new System.Drawing.Point(498, 506);
             this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignIn.Name = "btnSignIn";
@@ -265,11 +267,46 @@
             this.lblDialog_Guide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDialog_Guide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDialog_Guide.ForeColor = System.Drawing.Color.Black;
-            this.lblDialog_Guide.Location = new System.Drawing.Point(129, 104);
+            this.lblDialog_Guide.Location = new System.Drawing.Point(123, 103);
             this.lblDialog_Guide.Name = "lblDialog_Guide";
             this.lblDialog_Guide.Size = new System.Drawing.Size(95, 20);
             this.lblDialog_Guide.TabIndex = 36;
             this.lblDialog_Guide.Text = "Registration";
+            // 
+            // lblPassInfo
+            // 
+            this.lblPassInfo.AutoSize = true;
+            this.lblPassInfo.Location = new System.Drawing.Point(495, 420);
+            this.lblPassInfo.Name = "lblPassInfo";
+            this.lblPassInfo.Size = new System.Drawing.Size(356, 26);
+            this.lblPassInfo.TabIndex = 45;
+            this.lblPassInfo.Text = "Le mdp doit contenir au moins une lettre, un chiffre et un caractère special\r\n(12" +
+    " caractères au minimum)";
+            // 
+            // comboCountry
+            // 
+            this.comboCountry.AutoResize = false;
+            this.comboCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboCountry.Depth = 0;
+            this.comboCountry.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboCountry.DropDownHeight = 174;
+            this.comboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCountry.DropDownWidth = 121;
+            this.comboCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboCountry.FormattingEnabled = true;
+            this.comboCountry.IntegralHeight = false;
+            this.comboCountry.ItemHeight = 43;
+            this.comboCountry.Items.AddRange(new object[] {
+            "Suisse",
+            "France"});
+            this.comboCountry.Location = new System.Drawing.Point(498, 313);
+            this.comboCountry.MaxDropDownItems = 4;
+            this.comboCountry.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboCountry.Name = "comboCountry";
+            this.comboCountry.Size = new System.Drawing.Size(154, 49);
+            this.comboCountry.StartIndex = 0;
+            this.comboCountry.TabIndex = 46;
             // 
             // picRepeatPassword
             // 
@@ -381,46 +418,54 @@
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
             // 
-            // lblPassInfo
+            // btnModifyPassword
             // 
-            this.lblPassInfo.AutoSize = true;
-            this.lblPassInfo.Location = new System.Drawing.Point(495, 420);
-            this.lblPassInfo.Name = "lblPassInfo";
-            this.lblPassInfo.Size = new System.Drawing.Size(356, 26);
-            this.lblPassInfo.TabIndex = 45;
-            this.lblPassInfo.Text = "Le mdp doit contenir au moins une lettre, un chiffre et un caractère special\r\n(12" +
-    " caractères au minimum)";
+            this.btnModifyPassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModifyPassword.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnModifyPassword.Depth = 0;
+            this.btnModifyPassword.HighEmphasis = true;
+            this.btnModifyPassword.Icon = null;
+            this.btnModifyPassword.Location = new System.Drawing.Point(595, 408);
+            this.btnModifyPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModifyPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModifyPassword.Name = "btnModifyPassword";
+            this.btnModifyPassword.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnModifyPassword.Size = new System.Drawing.Size(144, 36);
+            this.btnModifyPassword.TabIndex = 47;
+            this.btnModifyPassword.Text = "Modifier le mdp";
+            this.btnModifyPassword.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnModifyPassword.UseAccentColor = false;
+            this.btnModifyPassword.UseVisualStyleBackColor = true;
+            this.btnModifyPassword.Visible = false;
             // 
-            // comboCountry
+            // btnFinishModification
             // 
-            this.comboCountry.AutoResize = false;
-            this.comboCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboCountry.Depth = 0;
-            this.comboCountry.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboCountry.DropDownHeight = 174;
-            this.comboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCountry.DropDownWidth = 121;
-            this.comboCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboCountry.FormattingEnabled = true;
-            this.comboCountry.IntegralHeight = false;
-            this.comboCountry.ItemHeight = 43;
-            this.comboCountry.Items.AddRange(new object[] {
-            "Suisse",
-            "France"});
-            this.comboCountry.Location = new System.Drawing.Point(498, 313);
-            this.comboCountry.MaxDropDownItems = 4;
-            this.comboCountry.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboCountry.Name = "comboCountry";
-            this.comboCountry.Size = new System.Drawing.Size(154, 49);
-            this.comboCountry.StartIndex = 0;
-            this.comboCountry.TabIndex = 46;
+            this.btnFinishModification.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFinishModification.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnFinishModification.Depth = 0;
+            this.btnFinishModification.HighEmphasis = true;
+            this.btnFinishModification.Icon = null;
+            this.btnFinishModification.Location = new System.Drawing.Point(1005, 585);
+            this.btnFinishModification.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFinishModification.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFinishModification.Name = "btnFinishModification";
+            this.btnFinishModification.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnFinishModification.Size = new System.Drawing.Size(64, 36);
+            this.btnFinishModification.TabIndex = 48;
+            this.btnFinishModification.Text = "Finir";
+            this.btnFinishModification.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnFinishModification.UseAccentColor = false;
+            this.btnFinishModification.UseVisualStyleBackColor = true;
+            this.btnFinishModification.Visible = false;
+            this.btnFinishModification.Click += new System.EventHandler(this.btnFinishModification_Click);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 656);
+            this.Controls.Add(this.btnFinishModification);
+            this.Controls.Add(this.btnModifyPassword);
             this.Controls.Add(this.comboCountry);
             this.Controls.Add(this.lblPassInfo);
             this.Controls.Add(this.picRepeatPassword);
@@ -442,8 +487,10 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.Gray;
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.MaximizeBox = false;
             this.Name = "Registration";
+            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
@@ -486,5 +533,7 @@
         private System.Windows.Forms.PictureBox picRepeatPassword;
         private System.Windows.Forms.Label lblPassInfo;
         private MaterialSkin.Controls.MaterialComboBox comboCountry;
+        private MaterialSkin.Controls.MaterialButton btnModifyPassword;
+        private MaterialSkin.Controls.MaterialButton btnFinishModification;
     }
 }

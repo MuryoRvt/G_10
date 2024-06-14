@@ -24,33 +24,29 @@ namespace P_Sante.Controllers
         /// <summary>
         /// Register page
         /// </summary>
-        private Registration _aRegister;
+        private Registration _aRegistration;
 
         private Interests _aInterests;
 
         private MentalQuestions _aMentalQuestions;
 
-        private PhysicalQuestions _aPhysiqueQuestions;
+        private PhysicalQuestions _aPhysicalQuestions;
 
         private Profile _aProfile;
 
         private DialogWindow _aDialog;
-
-        private Contact _aContact;
-
-        private State _aState;
         /// <summary>
         /// Model (db manager)
         /// </summary>
         private Model _aModel;
 
-        private string _nameEx = @"^[A-Za-zÀ-ÖØ-öø-ÿ\- ']+$";
+        private const string NAME_EX = @"^[A-Za-zÀ-ÖØ-öø-ÿ\- ']+$";
 
-        private string _emailEx = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+        private const string EMAIL_EX = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 
-        private string _passEx = @"^(?=.*\d)(?=.*[^a-zA-Z0-9,]).{12,}$";
+        private const string PASS_EX = @"^(?=.*\d)(?=.*[^a-zA-Z0-9,]).{12,}$";
 
-        private string _weightEx = @"^\d{1,3}$";
+        private const string WEIGHT_EX = @"^\d{1,3}$";
 
         private const int SALT_LENGTH = 40;
 
@@ -60,35 +56,35 @@ namespace P_Sante.Controllers
         /// <param name="aLogin">Login page</param>
         /// <param name="aRegister">Register page</param>
         /// <param name="aModel">Model</param>
-        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysicalQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, Contact aContact, State aState, Model aModel)
+        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysicalQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, Model aModel)
         {
             _aLogin = aLogin;
-            _aRegister = aRegister;
+            _aRegistration = aRegister;
             _aInterests = aInterests;
             _aMentalQuestions = aMentalQuestions;
-            _aPhysiqueQuestions = aPhysiqueQuestions;
+            _aPhysicalQuestions = aPhysiqueQuestions;
             _aProfile = aProfile;
             _aDialog = aDialog;
-            _aContact = aContact;
-            _aState = aState;
             _aModel = aModel;
 
             _aLogin.Controller = this;
-            _aRegister.Controller = this;
+            _aRegistration.Controller = this;
             _aInterests.Controller = this;
             _aMentalQuestions.Controller = this;
-            _aPhysiqueQuestions.Controller = this;
+            _aPhysicalQuestions.Controller = this;
             _aProfile.Controller = this;
             _aDialog.Controller = this;
-            _aContact.Controller = this;
-            _aState.Controller = this;
             _aModel.Controller = this;
         }
 
-        public void OpenRegister(MaterialForm form)
+        public void OpenRegistration(MaterialForm form)
         {
-            _aRegister.Location = new Point(form.Location.X, form.Location.Y);
-            _aRegister.Show();
+            _aRegistration.Location = new Point(form.Location.X, form.Location.Y);
+            if(form is Profile)
+            {
+                _aRegistration.Modify = true;
+            }
+            _aRegistration.Show();
         }
 
         public void OpenLogin(MaterialForm form) 
@@ -112,13 +108,15 @@ namespace P_Sante.Controllers
 
         public void HideMentalQuestions() => _aMentalQuestions.Hide();
 
-        public void OpenPhysiqueQuestions(MaterialForm form)
+        public void OpenPhysicalQuestions(MaterialForm form)
         {
-            _aPhysiqueQuestions.Location = new Point(form.Location.X, form.Location.Y);
-            _aPhysiqueQuestions.Show();
+            _aPhysicalQuestions.Location = new Point(form.Location.X, form.Location.Y);
+            if (form is Profile)
+                _aPhysicalQuestions.Modify = true;
+            _aPhysicalQuestions.Show();
         } 
 
-        public void HidePhysicalQuestions() => _aPhysiqueQuestions.Hide();
+        public void HidePhysicalQuestions() => _aPhysicalQuestions.Hide();
 
         public void OpenProfile(MaterialForm form)
         {
@@ -130,7 +128,7 @@ namespace P_Sante.Controllers
         {
             if (CurrentUser().IntPhysicalHealth)
             {
-                _aProfile.Location = new Point(_aPhysiqueQuestions.Location.X, _aPhysiqueQuestions.Location.Y);
+                _aProfile.Location = new Point(_aPhysicalQuestions.Location.X, _aPhysicalQuestions.Location.Y);
             }
             else
             {
@@ -145,25 +143,13 @@ namespace P_Sante.Controllers
             _aDialog.Show();
         } 
 
-        public void OpenContact(MaterialForm form)
-        {
-            _aContact.Location = new Point(form.Location.X, form.Location.Y);
-            _aContact.Show();
-        }
-
-        public void OpenState(MaterialForm form)
-        {
-            _aState.Location = new Point(form.Location.X, form.Location.Y);
-            _aState.Show();
-        }
-
         public void UpdateBasicData(string firstName, string lastName, string email, string country, string password)
         {
             _aModel.CurrentUser.FirstName = firstName;
             _aModel.CurrentUser.LastName = lastName;
             _aModel.CurrentUser.Email = email;
             _aModel.CurrentUser.Country = country;
-            _aModel.CurrentUser.Password = HashPassword(password);
+            _aModel.CurrentUser.Password = password;
         }
 
         public void UpdateInterests(bool mental, bool physique)
@@ -197,9 +183,9 @@ namespace P_Sante.Controllers
             _aModel.CurrentUser.PhysicalScore = PhysicalScore();
         }
 
-        public void InsertData() => _aModel.InsertIntoDB(_aModel.CurrentUser);
+        public void InsertData() => _aModel.InsertIntoDB();
 
-        public void UpdateUsers() => _aModel.AllUsers = _aModel.ListUsers();
+        public void UpdateAllUsers() => _aModel.AllUsers = _aModel.ListUsers();
 
         public bool CheckUser(string email, string password)
         {
@@ -220,7 +206,7 @@ namespace P_Sante.Controllers
         {
             foreach(User u in _aModel.AllUsers)
             {
-                if(u.Email == email)
+                if(u.Email == email && u != _aModel.CurrentUser)
                 {
                     return true;
                 }
@@ -247,17 +233,17 @@ namespace P_Sante.Controllers
 
         public bool EmailCheck(string email)
         {
-            return Regex.IsMatch(email, _emailEx);
+            return Regex.IsMatch(email, EMAIL_EX);
         }
 
         public bool NameCheck(string name)
         {
-            return Regex.IsMatch(name, _nameEx);
+            return Regex.IsMatch(name, NAME_EX);
         }
 
         public bool PasswordCheck(string password)
         {
-            return Regex.IsMatch(password, _passEx);
+            return Regex.IsMatch(password, PASS_EX);
         }
 
         public bool RegCheck(bool firstName, bool lastName, bool email, bool password, bool repeat)
@@ -265,14 +251,17 @@ namespace P_Sante.Controllers
             return firstName && lastName && email && password && repeat;
         }
 
-        public bool WeightCheck(string weight)
+        public bool RegCheck(bool firstName, bool lastName, bool email)
         {
-            return Regex.IsMatch(weight, _weightEx);
+            return firstName && lastName && email;
         }
 
-        public void AddUser() => _aModel.AllUsers.Add(_aModel.CurrentUser);
+        public bool WeightCheck(string weight)
+        {
+            return Regex.IsMatch(weight, WEIGHT_EX);
+        }
 
-        private static string HashPassword(string clearPassword)
+        public string HashPassword(string clearPassword)
         {
             string salt = "";
             string hashPassword = "";
@@ -339,6 +328,27 @@ namespace P_Sante.Controllers
 
             // Retourne le userInput hash avec le sel du MasterPassword + le sel en clair
             return hashPassword + salt;
+        }
+
+        public void UpdateUser()
+        {
+            _aModel.UpdateData();
+        }
+
+        public void LastUser()
+        {
+            User newUser = new User()
+            {
+                Id = 0
+            };
+            foreach(User u in _aModel.AllUsers)
+            {
+                if(u.Id > newUser.Id)
+                {
+                    newUser = u;
+                }
+            }
+            _aModel.CurrentUser = newUser;
         }
     }
 }

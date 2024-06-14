@@ -23,7 +23,7 @@ namespace P_Sante.Views
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            Controller.OpenRegister(this);
+            Controller.OpenRegistration(this);
             this.Hide();
         }
 
@@ -71,11 +71,10 @@ namespace P_Sante.Views
 
         private void Login_Load(object sender, EventArgs e)
         {
-            Controller.UpdateUsers();
+            Controller.UpdateAllUsers();
             txtEmail.ForeColorCustom = Color.Gray;
             SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Green400, MaterialSkin.Primary.Green500, MaterialSkin.Primary.Brown50, MaterialSkin.Accent.DeepOrange200, MaterialSkin.TextShade.WHITE);
-
+            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Green400, MaterialSkin.Primary.Green500, MaterialSkin.Primary.Brown50, MaterialSkin.Accent.DeepOrange700, MaterialSkin.TextShade.WHITE);
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -100,4 +99,3 @@ namespace P_Sante.Views
         }
     }
 }
-

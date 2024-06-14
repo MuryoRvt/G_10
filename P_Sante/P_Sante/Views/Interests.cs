@@ -28,7 +28,7 @@ namespace P_Sante.Views
                 if (Controller.CurrentUser().IntMentalHealth)
                     Controller.OpenMentalQuestions(this);
                 else
-                    Controller.OpenPhysiqueQuestions(this);
+                    Controller.OpenPhysicalQuestions(this);
 
                 this.Hide();
             }

@@ -87,7 +87,7 @@
             this.lblQ1.Name = "lblQ1";
             this.lblQ1.Size = new System.Drawing.Size(238, 19);
             this.lblQ1.TabIndex = 19;
-            this.lblQ1.Text = "Comment ca va aujourd\'hui? 0-10";
+            this.lblQ1.Text = "Comment ça va aujourd\'hui? 0-10";
             // 
             // lblQ2
             // 
@@ -216,7 +216,7 @@
             this.txtFavourites1.AnimateReadOnly = false;
             this.txtFavourites1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites1.Depth = 0;
-            this.txtFavourites1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites1.LeadingIcon = null;
             this.txtFavourites1.Location = new System.Drawing.Point(580, 432);
             this.txtFavourites1.MaxLength = 50;
@@ -233,7 +233,7 @@
             this.txtFavourites2.AnimateReadOnly = false;
             this.txtFavourites2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites2.Depth = 0;
-            this.txtFavourites2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites2.LeadingIcon = null;
             this.txtFavourites2.Location = new System.Drawing.Point(580, 488);
             this.txtFavourites2.MaxLength = 50;
@@ -250,7 +250,7 @@
             this.txtFavourites3.AnimateReadOnly = false;
             this.txtFavourites3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites3.Depth = 0;
-            this.txtFavourites3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites3.LeadingIcon = null;
             this.txtFavourites3.Location = new System.Drawing.Point(578, 544);
             this.txtFavourites3.MaxLength = 50;
@@ -353,7 +353,7 @@
             this.btnNext.Depth = 0;
             this.btnNext.HighEmphasis = true;
             this.btnNext.Icon = null;
-            this.btnNext.Location = new System.Drawing.Point(956, 606);
+            this.btnNext.Location = new System.Drawing.Point(968, 597);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNext.Name = "btnNext";
@@ -373,7 +373,7 @@
             this.btnPrevious.Depth = 0;
             this.btnPrevious.HighEmphasis = true;
             this.btnPrevious.Icon = null;
-            this.btnPrevious.Location = new System.Drawing.Point(49, 606);
+            this.btnPrevious.Location = new System.Drawing.Point(61, 597);
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnPrevious.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevious.Name = "btnPrevious";
@@ -549,8 +549,10 @@
             this.Controls.Add(this.lblQ3);
             this.Controls.Add(this.lblQ2);
             this.Controls.Add(this.lblQ1);
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.MaximizeBox = false;
             this.Name = "MentalQuestions";
+            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MentalQuestions";

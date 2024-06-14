@@ -125,12 +125,6 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Views\Contact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Contact.Designer.cs">
-      <DependentUpon>Contact.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\DialogWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,15 +169,6 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\State.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\State.Designer.cs">
-      <DependentUpon>State.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Views\Contact.resx">
-      <DependentUpon>Contact.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\DialogWindow.resx">
       <DependentUpon>DialogWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\State.resx">
-      <DependentUpon>State.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -330,6 +312,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Termo8BitsAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sadface8Bit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HappyFace8Bits.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,8 @@ namespace P_Sante.Views
         private void btnYes_Click(object sender, EventArgs e)
         {
             Controller.InsertData();
-            Controller.AddUser();
+            Controller.UpdateAllUsers();
+            Controller.LastUser();
             Controller.OpenProfile();
             this.Hide();
             if(Controller.CurrentUser().IntPhysicalHealth)
