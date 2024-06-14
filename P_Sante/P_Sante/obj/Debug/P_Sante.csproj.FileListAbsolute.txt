@@ -168,3 +168,4 @@ E:\InnoWeeks\G_10\P_Sante\P_Sante\bin\Debug\System.Threading.Tasks.Extensions.xm
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.DialogWindow.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.PhysicalQuestions.resources
 E:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.Profile.resources
+D:\InnoWeeks\G_10\P_Sante\P_Sante\obj\Debug\P_Sante.Views.ModifyPassword.resources

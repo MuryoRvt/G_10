@@ -18,13 +18,13 @@ namespace P_Sante.Views
         /// </summary>
         public Controllers.Controller Controller { get; set; }
 
-        private Image check = Properties.Resources.check;
+        private Image _check = Properties.Resources.check;
 
-        private Image nonCheck = Properties.Resources.multiply;
+        private Image _nonCheck = Properties.Resources.multiply;
 
         public bool Modify { get; set; } = false;
 
-        private string _tempPass = "";
+        public string TempPass { get; set; } = "";
 
         public Registration()
         {
@@ -39,7 +39,7 @@ namespace P_Sante.Views
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if(Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check, picPassword.Image == check, picRepeatPassword.Image == check))
+            if(Controller.RegCheck(picFirstName.Image == _check, picLastName.Image == _check, picEmail.Image == _check, picPassword.Image == _check, picRepeatPassword.Image == _check))
             {
                 if(Controller.EmailExists(txtEmail.Text))
                 {
@@ -114,7 +114,7 @@ namespace P_Sante.Views
                     {
                         txtFirstName.ForeColorCustom = Color.Gray;
                         txtFirstName.Text = "Prénom";
-                        picFirstName.Image = nonCheck;
+                        picFirstName.Image = _nonCheck;
                         picFirstName.Visible = false;
                     }
                     break;
@@ -123,7 +123,7 @@ namespace P_Sante.Views
                     {
                         txtLastName.ForeColorCustom = Color.Gray;
                         txtLastName.Text = "Nom";
-                        picLastName.Image = nonCheck;
+                        picLastName.Image = _nonCheck;
                         picLastName.Visible = false;
                     }
                     break;
@@ -132,7 +132,7 @@ namespace P_Sante.Views
                     {
                         txtEmail.ForeColorCustom = Color.Gray;
                         txtEmail.Text = "E-mail";
-                        picEmail.Image = nonCheck;
+                        picEmail.Image = _nonCheck;
                         picEmail.Visible = false;
                     }
                     break;
@@ -145,7 +145,7 @@ namespace P_Sante.Views
             {
                 txtPassword.PasswordChar = '\0';
                 txtPassword.Text = "Mot de passe";
-                picPassword.Image = nonCheck;
+                picPassword.Image = _nonCheck;
                 picPassword.Visible = false;
             }
         }
@@ -155,7 +155,7 @@ namespace P_Sante.Views
             {
                 txtRepeatPassword.PasswordChar = '\0';
                 txtRepeatPassword.Text = "Répétez le mdp";
-                picRepeatPassword.Image = nonCheck;
+                picRepeatPassword.Image = _nonCheck;
                 picRepeatPassword.Visible = false;
             }
         }
@@ -201,7 +201,7 @@ namespace P_Sante.Views
                 btnModifyPassword.Visible = true;
                 btnFinishModification.Visible = true;
 
-                _tempPass = Controller.CurrentUser().Password;
+                TempPass = Controller.CurrentUser().Password;
 
                 Modify = false;
             }
@@ -246,11 +246,11 @@ namespace P_Sante.Views
                     }
                     if (Controller.NameCheck(txtFirstName.Text))
                     {
-                        picFirstName.Image = check;
+                        picFirstName.Image = _check;
                     }
                     else
                     {
-                        picFirstName.Image = nonCheck;
+                        picFirstName.Image = _nonCheck;
                     }
                     break;
                 case CustomMaterialTextBox txtbox2 when txtbox2 == txtLastName:
@@ -260,11 +260,11 @@ namespace P_Sante.Views
                     }
                     if (Controller.NameCheck(txtLastName.Text))
                     {
-                        picLastName.Image = check;
+                        picLastName.Image = _check;
                     }
                     else
                     {
-                        picLastName.Image = nonCheck;
+                        picLastName.Image = _nonCheck;
                     }
                     break;
                 case CustomMaterialTextBox txtbox3 when txtbox3 == txtEmail:
@@ -274,11 +274,11 @@ namespace P_Sante.Views
                     }
                     if (Controller.EmailCheck(txtEmail.Text))
                     {
-                        picEmail.Image = check;
+                        picEmail.Image = _check;
                     }
                     else
                     {
-                        picEmail.Image = nonCheck;
+                        picEmail.Image = _nonCheck;
                     }
                     break;
             }
@@ -292,11 +292,11 @@ namespace P_Sante.Views
             }
             if (Controller.PasswordCheck(txtPassword.Text))
             {
-                picPassword.Image = check;
+                picPassword.Image = _check;
             }
             else
             {
-                picPassword.Image = nonCheck;
+                picPassword.Image = _nonCheck;
             }
         }
 
@@ -308,37 +308,45 @@ namespace P_Sante.Views
             }
             if (Controller.PasswordCheck(txtRepeatPassword.Text) && txtRepeatPassword.Text == txtPassword.Text)
             {
-                picRepeatPassword.Image = check;
+                picRepeatPassword.Image = _check;
             }
             else
             {
-                picRepeatPassword.Image = nonCheck;
+                picRepeatPassword.Image = _nonCheck;
             }
         }
 
         private void btnFinishModification_Click(object sender, EventArgs e)
         {
-            if (Controller.RegCheck(picFirstName.Image == check, picLastName.Image == check, picEmail.Image == check))
+            if(!Controller.ModifyIsOpen())
             {
-                if (Controller.EmailExists(txtEmail.Text))
+                if (Controller.RegCheck(picFirstName.Image == _check, picLastName.Image == _check, picEmail.Image == _check))
                 {
-                    MessageBox.Show("L'utilisateur avec cet email existe déjà");
+                    if (Controller.EmailExists(txtEmail.Text))
+                    {
+                        MessageBox.Show("L'utilisateur avec cet email existe déjà");
+                    }
+                    else
+                    {
+                        Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, TempPass);
+                        Controller.UpdateUser();
+
+                        TempPass = "";
+
+                        Controller.OpenProfile(this);
+                        this.Hide();
+                    }
                 }
                 else
                 {
-                    Controller.UpdateBasicData(txtFirstName.Text, txtLastName.Text, txtEmail.Text, comboCountry.Text, _tempPass);
-                    Controller.UpdateUser();
-
-                    _tempPass = "";
-
-                    Controller.OpenProfile(this);
-                    this.Hide();
+                    MessageBox.Show("NON");
                 }
             }
-            else
-            {
-                MessageBox.Show("NON");
-            }
+        }
+
+        private void btnModifyPassword_Click(object sender, EventArgs e)
+        {
+            Controller.OpenModify(this);
         }
     }
 }

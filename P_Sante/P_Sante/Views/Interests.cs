@@ -42,5 +42,11 @@ namespace P_Sante.Views
         {
             Application.Exit();
         }
+
+        private void Interests_VisibleChanged(object sender, EventArgs e)
+        {
+            chkMentalHealth.Checked = false;
+            chkPhysHealth.Checked = false;
+        }
     }
 }

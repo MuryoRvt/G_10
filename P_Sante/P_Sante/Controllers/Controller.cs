@@ -35,6 +35,8 @@ namespace P_Sante.Controllers
         private Profile _aProfile;
 
         private DialogWindow _aDialog;
+
+        private ModifyPassword _aModify;
         /// <summary>
         /// Model (db manager)
         /// </summary>
@@ -56,7 +58,7 @@ namespace P_Sante.Controllers
         /// <param name="aLogin">Login page</param>
         /// <param name="aRegister">Register page</param>
         /// <param name="aModel">Model</param>
-        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysicalQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, Model aModel)
+        public Controller(Login aLogin, Registration aRegister, Interests aInterests, MentalQuestions aMentalQuestions, PhysicalQuestions aPhysiqueQuestions, Profile aProfile, DialogWindow aDialog, ModifyPassword aModify, Model aModel)
         {
             _aLogin = aLogin;
             _aRegistration = aRegister;
@@ -65,6 +67,7 @@ namespace P_Sante.Controllers
             _aPhysicalQuestions = aPhysiqueQuestions;
             _aProfile = aProfile;
             _aDialog = aDialog;
+            _aModify = aModify;
             _aModel = aModel;
 
             _aLogin.Controller = this;
@@ -74,6 +77,7 @@ namespace P_Sante.Controllers
             _aPhysicalQuestions.Controller = this;
             _aProfile.Controller = this;
             _aDialog.Controller = this;
+            _aModify.Controller = this;
             _aModel.Controller = this;
         }
 
@@ -89,8 +93,13 @@ namespace P_Sante.Controllers
 
         public void OpenLogin(MaterialForm form) 
         {
-            _aLogin.StartPosition = FormStartPosition.Manual;
             _aLogin.Location = new Point(form.Location.X, form.Location.Y);
+            _aLogin.Show();
+        }
+
+        public void OpenLogin()
+        {
+            _aLogin.Location = new Point(_aProfile.Location.X, _aProfile.Location.Y);
             _aLogin.Show();
         }
 
@@ -103,6 +112,10 @@ namespace P_Sante.Controllers
         public void OpenMentalQuestions(MaterialForm form)
         {
             _aMentalQuestions.Location = new Point(form.Location.X, form.Location.Y);
+            if(form is Profile)
+            {
+                _aMentalQuestions.Modify = true;
+            }
             _aMentalQuestions.Show();
         } 
 
@@ -124,6 +137,8 @@ namespace P_Sante.Controllers
             _aProfile.Show();
         }
 
+        public void HideProfile() => _aProfile.Hide();
+
         public void OpenProfile()
         {
             if (CurrentUser().IntPhysicalHealth)
@@ -140,8 +155,18 @@ namespace P_Sante.Controllers
         public void OpenDialog(MaterialForm form)
         {
             _aDialog.Location = new Point(form.Location.X + form.Width / 4, form.Location.Y + form.Height / 4);
+            if(form is Profile)
+            {
+                _aDialog.Delete = true;
+            }
             _aDialog.Show();
         } 
+
+        public void OpenModify(MaterialForm form)
+        {
+            _aModify.Location = new Point(form.Location.X + form.Width / 4, form.Location.Y + form.Height / 4);
+            _aModify.Show();
+        }
 
         public void UpdateBasicData(string firstName, string lastName, string email, string country, string password)
         {
@@ -180,6 +205,8 @@ namespace P_Sante.Controllers
             _aModel.CurrentUser.Medicines1 = medecines1;
             _aModel.CurrentUser.Medicines2 = medecines2;
             _aModel.CurrentUser.Medicines3 = medecines3;
+            _aModel.CurrentUser.Height = height;
+            _aModel.CurrentUser.Weight = weight;
             _aModel.CurrentUser.PhysicalScore = PhysicalScore();
         }
 
@@ -349,6 +376,22 @@ namespace P_Sante.Controllers
                 }
             }
             _aModel.CurrentUser = newUser;
+        }
+
+        public void DeleteUser()
+        {
+            _aModel.DeleteUser();
+            _aModel.AllUsers.Remove(_aModel.CurrentUser);
+        }
+
+        public void UpdatePassword(string password)
+        {
+            _aRegistration.TempPass = HashPassword(password);
+        }
+
+        public bool ModifyIsOpen()
+        {
+            return _aModify.Visible;
         }
     }
 }

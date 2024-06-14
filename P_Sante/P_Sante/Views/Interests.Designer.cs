@@ -172,6 +172,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interests";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Interests_FormClosed);
+            this.VisibleChanged += new System.EventHandler(this.Interests_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinguin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

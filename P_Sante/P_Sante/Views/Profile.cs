@@ -90,6 +90,10 @@ namespace P_Sante.Views
                                            "+33 1 45 67 89 00";
                         break;
                 }
+            if(tabControl.SelectedIndex == 1)
+            {
+                tabControl_SelectedIndexChanged(tabControl, e);
+            }
                // _open = false;
             //}
             //else
@@ -183,6 +187,17 @@ namespace P_Sante.Views
         {
             Controller.OpenPhysicalQuestions(this);
             this.Hide();
+        }
+
+        private void btnChangeMentalAnswers_Click(object sender, EventArgs e)
+        {
+            Controller.OpenMentalQuestions(this);
+            this.Hide();
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            Controller.OpenDialog(this);
         }
     }
 }

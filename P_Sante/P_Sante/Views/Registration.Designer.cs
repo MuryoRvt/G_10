@@ -437,6 +437,7 @@
             this.btnModifyPassword.UseAccentColor = false;
             this.btnModifyPassword.UseVisualStyleBackColor = true;
             this.btnModifyPassword.Visible = false;
+            this.btnModifyPassword.Click += new System.EventHandler(this.btnModifyPassword_Click);
             // 
             // btnFinishModification
             // 

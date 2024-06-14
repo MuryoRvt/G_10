@@ -32,12 +32,13 @@ namespace P_Sante
             PhysicalQuestions aPhysicalQuestions = new PhysicalQuestions();
             Profile aProfile = new Profile();
             DialogWindow aDialog = new DialogWindow();
+            ModifyPassword aModifyPassword = new ModifyPassword();
 
             //model's instance
             Model aModel = new Model();
 
             //controller's instance
-            Controller aController = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysicalQuestions, aProfile, aDialog, aModel);
+            _ = new Controller(aLogin, aRegister, aInterests, aMentalQuestions, aPhysicalQuestions, aProfile, aDialog, aModifyPassword, aModel);
 
             Application.Run(aLogin);
         }

@@ -95,9 +95,64 @@ namespace P_Sante.Views
                 rdbNoWater.Checked = !Controller.CurrentUser().Water;
                 rdbYesMedicines.Checked = Controller.CurrentUser().Medicines;
                 rdbNoMedecines.Checked = !Controller.CurrentUser().Medicines;
+                cmbZeroToTen.SelectedIndex = Controller.CurrentUser().FoodQuality;
+                txtHeight.Text = Controller.CurrentUser().Height.ToString();
+                txtWeight.Text = Controller.CurrentUser().Weight.ToString();
+
+                btnNext.Text = "Finir";
+                btnNext.Click -= btnNext_Click;
+                btnNext.Click += Finish_Click;
 
                 Modify = false;
             }
+            else
+            {
+                rdbYesSleep.Checked = false;
+                rdbNoSleep.Checked = false;
+                rdbYesExercises.Checked = false;
+                rdbNoExercises.Checked = false;
+                rdbYesWater.Checked = false;
+                rdbNoWater.Checked = false;
+                rdbYesMedicines.Checked = false;
+                rdbNoMedecines.Checked = false;
+                cmbZeroToTen.SelectedIndex = 0;
+                txtHeight.Text = "";
+                txtWeight.Text = "";
+
+                btnNext.Text = "Suivant";
+            }
+        }
+
+        private void Finish_Click(object sender, EventArgs e)
+        {
+            if ((rdbNoExercises.Checked || rdbYesExercises.Checked) && (rdbNoSleep.Checked || rdbYesSleep.Checked) && (rdbNoWater.Checked || rdbYesWater.Checked) && (rdbNoMedecines.Checked || rdbYesMedicines.Checked))
+            {
+                if (Int32.TryParse(txtHeight.Text, out int result) && Controller.WeightCheck(txtWeight.Text))
+                {
+                    if (result > 50 && result < 300)
+                    {
+                        Controller.UpdatePhysicalData(rdbYesSleep.Checked, rdbYesExercises.Checked, rdbYesWater.Checked, cmbZeroToTen.Text, rdbYesMedicines.Checked, txtMedecines1.Text, txtMedecines2.Text, txtMedecines3.Text, result, Int32.Parse(txtWeight.Text));
+                        Controller.UpdateUser();
+
+                        Controller.OpenProfile(this);
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Veuillez donner la taille cohérente");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez donner le poids et la taille cohérents");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez remplir toutes les cases");
+            }
+            btnNext.Click += btnNext_Click;
+            btnNext.Click -= Finish_Click;
         }
     }
 }

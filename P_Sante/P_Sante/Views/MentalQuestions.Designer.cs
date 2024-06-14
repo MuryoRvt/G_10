@@ -216,7 +216,7 @@
             this.txtFavourites1.AnimateReadOnly = false;
             this.txtFavourites1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites1.Depth = 0;
-            this.txtFavourites1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites1.LeadingIcon = null;
             this.txtFavourites1.Location = new System.Drawing.Point(580, 432);
             this.txtFavourites1.MaxLength = 50;
@@ -233,7 +233,7 @@
             this.txtFavourites2.AnimateReadOnly = false;
             this.txtFavourites2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites2.Depth = 0;
-            this.txtFavourites2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites2.LeadingIcon = null;
             this.txtFavourites2.Location = new System.Drawing.Point(580, 488);
             this.txtFavourites2.MaxLength = 50;
@@ -250,7 +250,7 @@
             this.txtFavourites3.AnimateReadOnly = false;
             this.txtFavourites3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFavourites3.Depth = 0;
-            this.txtFavourites3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFavourites3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFavourites3.LeadingIcon = null;
             this.txtFavourites3.Location = new System.Drawing.Point(578, 544);
             this.txtFavourites3.MaxLength = 50;
@@ -557,6 +557,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MentalQuestions";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MentalQuestions_FormClosed);
+            this.VisibleChanged += new System.EventHandler(this.MentalQuestions_VisibleChanged);
             this.splitQuestions.Panel1.ResumeLayout(false);
             this.splitQuestions.Panel1.PerformLayout();
             this.splitQuestions.Panel2.ResumeLayout(false);

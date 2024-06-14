@@ -15,6 +15,8 @@ namespace P_Sante.Views
 
         public Controllers.Controller Controller { get; set; }
 
+        public bool Delete { get; set; }
+
         public DialogWindow()
         {
             InitializeComponent();
@@ -22,18 +24,31 @@ namespace P_Sante.Views
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            Controller.InsertData();
-            Controller.UpdateAllUsers();
-            Controller.LastUser();
-            Controller.OpenProfile();
-            this.Hide();
-            if(Controller.CurrentUser().IntPhysicalHealth)
+            if(Delete)
             {
-                Controller.HidePhysicalQuestions();
+                Controller.DeleteUser();
+                Controller.Deconnection();
+                Delete = false;
+
+                Controller.OpenLogin();
+                Controller.HideProfile();
+                this.Hide();
             }
             else
             {
-                Controller.HideMentalQuestions();
+                Controller.InsertData();
+                Controller.UpdateAllUsers();
+                Controller.LastUser();
+                Controller.OpenProfile();
+                this.Hide();
+                if (Controller.CurrentUser().IntPhysicalHealth)
+                {
+                    Controller.HidePhysicalQuestions();
+                }
+                else
+                {
+                    Controller.HideMentalQuestions();
+                }
             }
         }
 

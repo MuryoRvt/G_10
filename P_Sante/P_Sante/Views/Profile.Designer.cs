@@ -54,6 +54,7 @@
             this.lblPhys = new System.Windows.Forms.Label();
             this.lblPsy = new System.Windows.Forms.Label();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.btnDeleteAccount = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnDeleteAccount);
             this.tabPage1.Controls.Add(this.btnModify);
             this.tabPage1.Controls.Add(this.lblCountry);
             this.tabPage1.Controls.Add(this.lblEmail);
@@ -225,6 +227,7 @@
             this.btnChangeMentalAnswers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnChangeMentalAnswers.UseAccentColor = false;
             this.btnChangeMentalAnswers.UseVisualStyleBackColor = true;
+            this.btnChangeMentalAnswers.Click += new System.EventHandler(this.btnChangeMentalAnswers_Click);
             // 
             // pictureBox2
             // 
@@ -389,6 +392,26 @@
             this.materialTabSelector1.TabIndex = 14;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteAccount.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDeleteAccount.Depth = 0;
+            this.btnDeleteAccount.HighEmphasis = true;
+            this.btnDeleteAccount.Icon = null;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(666, 130);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteAccount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDeleteAccount.Size = new System.Drawing.Size(186, 36);
+            this.btnDeleteAccount.TabIndex = 9;
+            this.btnDeleteAccount.Text = "Supprimer le compte";
+            this.btnDeleteAccount.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDeleteAccount.UseAccentColor = false;
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,5 +471,6 @@
         private MaterialSkin.Controls.MaterialButton btnModify;
         private MaterialSkin.Controls.MaterialButton btnChangePhysAnswers;
         private MaterialSkin.Controls.MaterialButton btnChangeMentalAnswers;
+        private MaterialSkin.Controls.MaterialButton btnDeleteAccount;
     }
 }
